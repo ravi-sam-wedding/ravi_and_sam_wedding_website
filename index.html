@@ -1,588 +1,239 @@
-<!doctype html>
-<!-- DOCTYPE declaration for HTML5 -->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ravi ❤️ Sam - 02.15.2025</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Ravi and Sam wedding website." />
+	<meta name="author" content="Ravi Sharma" />
 
-<!--[if lt IE 7]>
-<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!-- Conditional comment for Internet Explorer versions less than 7 -->
-<!--[if IE 7]>
-<html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!-- Conditional comment for Internet Explorer version 7 -->
-<!--[if IE 8]>
-<html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!-- Conditional comment for Internet Explorer version 8 -->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="en"> <!--<![endif]-->
-<!-- HTML element for modern browsers (IE9 and above, and other browsers) -->
+	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Engagement" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia+Sans+Condensed" rel="stylesheet">
+	
+	<!-- clock   -->
+	<link rel="stylesheet" href="css/responsive-clock.css">
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.css'>
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
 
-<head>
-    <!-- Metadata and page settings -->
-    <meta charset="utf-8">
-    <!-- Character encoding set to UTF-8 -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <!-- Compatibility mode for Internet Explorer -->
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 
-    <title>Ravi ❤️ Sam - 02.15.2025</title>
-    <!-- Page title -->
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
 
-    <meta name="description" content="Ravi and Sam wedding website.">
-    <!-- Description of the page -->
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Setting viewport for responsive design -->
+	</head>
+	<body>
+		
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="container">
+			<div class="row">
+	
+				<div class="col-xs-10 text-right menu-1">
+					<ul>
+						<li class="active"><a href="index.html">Home</a></li>
+						<li class="active"><a href="#fh5co-events">Events and Details</a></li>
+                        <li class="active"><a href="#fh5co-intro">How we met</a></li>
+						<li class="active"><a href="#fh5co-eng-gallery">Engagement Gallery</a></li>
+						<li class="active"><a href="#fh5co-travel-lodging">Travel and Lodging</a></li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</nav>
 
-    <meta name="theme-color" content="#ffffff">
-    <!-- Setting the theme color for browsers on mobile devices -->
+	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/bg.jpg);" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<div class="display-t">
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+							<h1>Ravi &amp; Sam</h1>
+							<br>
+							<img src="images/fprint.png" alt="Ravi + Sam"> 
+							<h2>02.15.2025</h2>
+							<div class="flipTimebox">
+								<div class="clock clock-fix"></div>
+							  </div>
+							<p><a href="#fh5co-rsvp" class="btn btn-default btn-sm">RSVP</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
 
-    <!-- Icons for different platforms -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <!-- Apple touch icon for iOS devices -->
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <!-- Favicon for modern browsers -->
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <!-- Small favicon for older browsers -->
-    <link rel="manifest" href="manifest.json">
-    <!-- Web app manifest for PWA (Progressive Web App) support -->
-    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
-    <!-- Safari pinned tab icon -->
 
 
-    <script>
-        // Function to load CSS files from CDN if local versions from node_modules fail
-        function loadCssFromCDN(css) {
-            // Create a new link element
-            const link = document.createElement('link');
-    
-            // Set the href attribute to the appropriate CDN link based on the CSS file name
-            if (css === 'animate.css') {
-                link.href = 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css';
-            } else if (css === 'font-awesome.css') {
-                link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
-            }
-            link.rel = 'stylesheet'; // Set the relationship to stylesheet
-    
-            // Append the link element to the head section of the document
-            document.getElementsByTagName('head')[0].appendChild(link);
-        }
-    
-        // Function to load JavaScript files from CDN if local versions from node_modules fail
-        function loadJsFromCDN(js) {
-            // Use document.write to insert a script tag for the required JavaScript file from CDN
-            if (js === 'waypoints.js') {
-                document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"><\/script>');
-            } else if (js === 'jquery.js') {
-                document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"><\/script>');
-            }
-        }
-    </script>
-    
-    <!-- Link to CSS files for various styling and functionality -->
-    <link rel="stylesheet" href="css/normalize.min.css">
-    <!-- Normalize.css to make browsers render all elements more consistently -->
+	<div id="fh5co-events" class="fh5co-bg">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					<h2>Events</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="display-t">
+					<div class="display-tc">
+						<div class="col-md-10 col-md-offset-1">
+							<div class="col-md-6 col-sm-6 text-center">
+								<div class="event-wrap animate-box">
+									<h3>Welcome</h3>
+									<div class="event-col">
+										<i class="icon-calendar"></i>
+										<span>February 14 2025</span>
+									</div>
+									<div class="event-col">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Bootstrap CSS for responsive layout and design components -->
+										<i class="icon-clock"></i>
+										<span>7:00 PM</span>
+									</div>
+									<p>At <b>Fandi Mata, Brooklyn</b> Address <b>74 Bayard St, Brooklyn, NY 11222</b></p>
+									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.9620855249514!2d-73.95182802367833!3d40.718851137195756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259fe68162ca9%3A0xdadfc78daf8776b8!2sFandi%20Mata!5e0!3m2!1sen!2sus!4v1727648267234!5m2!1sen!2sus" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6 text-center">
+								<div class="event-wrap animate-box">
+									<h3>Ceremony</h3>
+									<div class="event-col">
+										<i class="icon-calendar"></i>
+										<span>February 15 2025</span>
+									</div>
+									<div class="event-col">
 
-    <link rel="stylesheet" href="css/jquery.fancybox.css">
-    <!-- jQuery Fancybox CSS for creating lightbox effects -->
+										<i class="icon-clock"></i>
+										<span>4:00 PM</span>
+									</div>
+									<p>At <b>Fandi Mata, Brooklyn</b> Address <b>74 Bayard St, Brooklyn, NY 11222</b></p>
+									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.9620855249514!2d-73.95182802367833!3d40.718851137195756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259fe68162ca9%3A0xdadfc78daf8776b8!2sFandi%20Mata!5e0!3m2!1sen!2sus!4v1727648267234!5m2!1sen!2sus" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-    <link rel="stylesheet" href="css/flexslider.css">
-    <!-- FlexSlider CSS for creating image sliders -->
 
-    <link rel="stylesheet" href="css/styles.min.css">
-    <!-- Main CSS for overall website styling -->
+	<div id="fh5co-eng-gallery" class="fh5co-section-gray">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					<h2>Gallery</h2>
+				</div>
+			</div>
+			<div class="row row-bottom-padded-md">
+				<div class="col-md-12">
+					<ul id="fh5co-gallery-list">
+						
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/RS1.jpg); "> 
+						<a href="images/RS1.jpg">
+							<div class="case-studies-summary">
+							</div>
+						</a>
+					</li>
 
-    <link rel="stylesheet" href="css/queries.css">
-    <!-- CSS for handling media queries and responsive design -->
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/RS2.jpg); "> 
+						<a href="images/RS2.jpg">
+							<div class="case-studies-summary">
+							</div>
+						</a>
+					</li>
+					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/RS3.jpg); "> 
+						<a href="images/RS3.jpg">
+							<div class="case-studies-summary">
+							</div>
+						</a>
+					</li>
+					
+					</ul>		
+				</div>
+			</div>
+		</div>
+	</div>
 
-    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css" onerror="loadCssFromCDN('animate.css')">
-    <!-- Animate.css for animation effects; fallback to CDN if loading fails -->
 
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" onerror="loadCssFromCDN('font-awesome.css')">
-    <!-- Font Awesome for icons; fallback to CDN if loading fails -->
 
-    <link rel="stylesheet" href="css/responsive-clock.css">
-    <!-- CSS for styling a responsive clock element -->
+	<div id="fh5co-services" class="fh5co-section-gray">
+		<div class="container">
+			
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>Highlights</h2>
 
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.css'>
-    <!-- FlipClock CSS from CDN for clock styling -->
+				</div>
+			</div>
 
-    <!-- Script to load Modernizr and Respond.js -->
-    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-    <!-- Modernizr to detect HTML5 and CSS3 features, Respond.js for polyfilling media queries in older IE -->
-</head>
 
-<body id="top">
-    <!-- Fallback message for outdated browsers, specifically for versions of Internet Explorer below 8 -->
-    <!--[if lt IE 8]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
-        your browser</a> to improve your experience.</p>
-    <![endif]-->
 
-    <!-- Main hero section -->
-    <section class="hero">
-        <!-- Navigation section -->
-        <section class="navigation">
-            <header>
-                <div class="header-content">
-                    <!-- Logo -->
-                    <div class="logo"><a href="#"><img src="img/logo.png" class="pulse2" alt="Logo"></a></div>
-                    <!-- Header navigation links -->
-                    <div class="header-nav">
-                        <nav>
-                            <ul class="primary-nav">
-                                <li><a href="#events">Events and Details</a></li>
-                                <li><a href="#intro">How we met</a></li>
-                                <li><a href="#eng-gallery">Engagement Gallery</a></li>
-                                <li><a href="#travel-lodging">Travel and Lodging</a></li>
-                            </ul>
-                            <ul class="member-actions">
-                                <li><a href="#rsvp" class="btn-white btn-small">RSVP</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <!-- Navigation toggle icon for mobile view -->
-                    <div class="navicon">
-                        <a class="nav-toggle" href="#"><span></span></a>
-                    </div>
-                </div>
-            </header>
-        </section>
+				<div class="container animate-box">
+					<div class="fh5co-video fh5co-bg" style="background-image: url(images/img_bg_3.jpg); ">
+						<a href="#" class="popup-vimeo"><i class="icon-video2"></i></a>
+						<div class="overlay"></div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
 
-        <!-- Main container for hero content -->
-        <div class="container text-center">
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1">
-                    <div class="hero-content">
-                        <!-- Placeholder for heading and intro text (currently commented out) -->
-                        <!--<h1>Ravi and Sam</h1>-->
-                        <img src="img/logo-lg.png">
-                        <!--<p class="intro">Ravi ❤️ Sam - 02.15.2025</p>-->
-                        <!--<a href="#" class="btn btn-fill btn-large btn-margin-right">Scroll Down</a> -->
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+    <!-- clock -->
+	<script src="js/clock.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
+	<script src='https://momentjs.com/downloads/moment.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.14/moment-timezone-with-data-2012-2022.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.js'></script>
+	<!-- Stellar -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
 
-                        <!-- Countdown Clock Section -->
-                        <div class="flipTimebox">
-                            <div class="clock clock-fix"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Down arrow for scrolling to invitation section -->
-        <div class="down-arrow floating-arrow"><a href="#invitation"><i class="fa fa-angle-down"></i></a></div>
-    </section>
-</body>
-
-<section id="invitation" class="section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h3>We are getting hitched</h3>
-                <p>The dates are 14<sup>th</sup> & 15<sup>th</sup> of February '25 and we would like you to be a part of
-                    it.</p>
-                <div class="share-bar"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="intro">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h3 class="header">How we met</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3 hidden-sm hidden-xs"><img src="img/sam_baby.jpg" class="wp1"></div>
-            <div class="col-md-6">
-                <p>
-                    We ringo dingoed at LTS.
-                </p>
-            </div>
-            <div class="col-md-3 hidden-sm hidden-xs"><img src="img/ravi_baby.jpg" class="wp2"></div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4 col-sm-push-2 col-xs-6 hidden-md hidden-lg"><img src="img/sam_baby.jpg" class="wp8"></div>
-            <div class="col-sm-4 col-sm-push-2 col-xs-6 hidden-md hidden-lg"><img src="img/ravi_baby.jpg" class="wp9"></div>
-        </div>
-    </div>
-</section>
-
-<section class="events section-padding" id="events">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h3 class="header">Events</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
-                <div class="wp3">
-                    <p><strong>14th February</strong></p>
-
-                    <h5>Mehndi <span class="time">1PM - 5PM</span></h5>
-                    <p>It's one of the oldest traditional Indian pre wedding ceremony where the bride and groom
-                        attend the event together and a professional mehndi artist applies
-                        mehndi to the bride's hands and feet. This will be having a celebratory
-                        festival feel to it with people wearing vibrant clothes and dancing, singing, playing
-                        games and a lot more.</p>
-                </div>
-                <div class="wp5">
-                    <h5>Cocktail Night <span class="time">7PM - 12AM</span></h5>
-                    <p>This event is no way close to ethnic. The bride & groom would like to have some "shots before the
-                        knot". With booze flowing down the floor and the western attire on, everyone would be busy
-                        showing off their new moves on the stage which they have finely honed. Lastly, expect some beer
-                        pong matches & karaoke for sure.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
-                <div class="wp4">
-                    <p><strong>15th February</strong></p>
-
-                    <h5>Haldi <span class="time">10AM-11AM</span></h5>
-                    <p>The haldi ceremony is usually held separately for the bride and the groom. This one is for the
-                        bride. It is a low-key event that involves the application of turmeric paste on the hands, legs
-                        and face of the bride. The groom is not allowed to see the bride after this ritual until the
-                        final wedding ceremony starts.</p>
-                </div>
-                <div class="wp6">
-                    <h5>Wedding <span class="time">6PM-12AM</span></h5>
-                    <p>This is the main event in the entire wedding when the bride and the groom tie the
-                        knot. The groom comes with the barat and is greeted by the bride side with some dhol of course
-                        as maximum number of guests would be attending this event. This is when the couple circle the
-                        sacred fire and are finally declared husband and wife.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row section-padding">
-            <div class="col-md-4 col-md-offset-4 text-center">
-                <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">
-                    <i class="fa fa-barcode"></i>&nbsp;&nbsp;Dress code
-                </a>
-            </div>
-        </div>
-        <!--<div class="row">
-            <div class="col-xs-12 section-border section-padding">
-            </div>
-        </div>-->
-    </div>
-
-    <div id="dc-modal" class="modal fade" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
-                    </button>
-                    <h3 class="text-center section-padding">Ugh... dress codes?</h3>
-                    <h5>Mehndi <span class="time">1PM - 5PM</span></h5>
-                    <p>
-                        <strong>Ethnic indian wear</strong>
-                        <br>
-                        Ladies can wear something
-                        <a href="https://www.pinterest.com/ramswarooppatra/mehndi-dress-for-women/">bright & vivid</a>
-                        and gentlemen can be on
-                        their <a href="https://www.pinterest.com/ramswarooppatra/mehndi-dress-for-men/">vibrant
-                        kurtas</a> with pants or pyjamas along with an optional shawl.
-                    </p>
-                    <h5>Cocktail Night <span class="time">7PM - 12AM</span></h5>
-                    <p>
-                        <strong>Western attire</strong>
-                        <br>
-                        A semi-formal look that is contemporary & fashionable which is not too prim & proper is the best
-                        to pull off this night. You can see some pins for
-                        <a href="https://www.pinterest.com/ramswarooppatra/cocktail-night-outfit-for-women/">ladies</a>
-                        & <a href="https://www.pinterest.com/ramswarooppatra/cocktail-night-outfit-for-men/">gents</a>.
-                    </p>
-                    <h5>Wedding <span class="time">6PM-12AM</span></h5>
-                    <p>
-                        <strong>Indo-western</strong>
-                        <br>
-                        Ladies can flaunt their unconventional sarees,
-                        <a href="https://www.pinterest.com/ramswarooppatra/indo-western-lehengas/">lehengas</a>,
-                        <a href="https://www.pinterest.com/ramswarooppatra/indo-western-anarkalis/">anarkalis</a>,
-                        dresses and the list
-                        goes on whereas gentlemen can wear any kind of suit or just blazer. If you don't like to wear a
-                        suit/blazer, you can do a <a
-                            href="https://www.pinterest.com/ramswarooppatra/high-neck-jackets-for-men/">high-neck
-                        (band gala) waistcoat & shirt</a> combo.
-                    </p>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-</section>
-
-<section id="instagram" class="section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h3>A picture is worth a thousand words!</h3>
-                <p>Help us capture the moment, tag your photos with the hashtag
-                    <a href="https://instagram.com/explore/tags/raviandsam/" target="_blank">#RaviAndSam</a>
-                </p>
-            </div>
-        </div>
-        <div class="row section-border wp7">
-            <div class="col-md-4 col-md-offset-4">
-                <img src="img/iphone_instagram.jpg">
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="eng-pics" class="section-padding">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h3 class="header">Engagement Pics</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/_RFX2942-lg.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/_RFX2942-sm.jpg" alt=""/>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/eng_pic16-lg.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/eng_pic21-sm.jpg" alt=""/>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/eng_pic19-lg.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/eng_pic24-sm.jpg" alt=""/>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/eng_pic20-lg.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/eng_pic25-sm.jpg" alt=""/>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/eng_pic17-lg.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/eng_pic22-sm.jpg" alt=""/>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/eng_pic18-lg.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/eng_pic23-sm.jpg" alt=""/>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row hidden-lg hidden-md hidden-xs">
-            <div class="col-xs-12 section-border section-padding"></div>
-        </div>
-    </div>
-    <!--<div class="row">
-        <div class="col-md-12">
-            <div class="diamond floating-logo">
-                <img src="img/sketch-logo.png" alt="Sketch Logo">
-                <div class="ring"></div>
-            </div>
-        </div>
-    </div>-->
-</section>
-
-<section id="video-bg" class="hidden-sm hidden-xs">
-    <div id="bgndVideo" class="player"
-         data-property="{videoURL:'https://www.youtube.com/watch?v=7S7smPw9EiE',containment:'#video-bg',autoPlay:true, mute:true, showControls:false, startAt:10, stopAt:120, opacity:1}">
-    </div>
-    <div id="video-content">
-        <h5>New York</h5>
-        <p>The city that never sleeps</p>
-    </div>
-</section>
-
-<section id="map" class="section-padding">
-    <div class="text-center">
-        <h3>How do I get there?</h3>
-        <p>It's way easier than you think!</p>
-    </div>
-    <div id="map-canvas"></div>
-    <div id="map-content-wrapper" class="container pointer-events-none">
-        <div class="row">
-            <div class="col-xs-offset-1 col-xs-10 col-md-offset-3 col-md-6">
-                <div class="text-center">
-                    <div id="btn-show-content" class="toggle-map-content pointer-events-auto">
-                        <i class="fa fa-info-circle"></i>&nbsp;&nbsp; Show info
-                    </div>
-                </div>
-                <div id="map-content" class="pointer-events-auto">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h5>Fandi Mata</h5>
-                            <p>74 Bayard St, Brooklyn, NY 11222</p>
-                        </div>
-                        <div class="col-md-6">
-                            <h5>Ivana</h5>
-                            <p><i class="fa fa-mobile"></i> <a href="tel://+919412345678">+91 9412345678</a><br>
-                                <i class="fa fa-mobile"></i> <a href="tel://+917123456789">+91 7123456789</a></p>
-                        </div>
-                    </div>
-                    <div class="row text-center">
-                        <div class="col-md-6" style="padding: 5px;">
-                            <a class="btn btn-fill btn-small"
-                               href="https://m.uber.com/ul/?action=setPickup&client_id=Yh7Dl6SjB56RY2JuuZF8ttVa6ryFV78W&pickup=my_location&dropoff[formatted_address]=Fortune%20Park%20Panchwati%20-%20Hotels%20in%20Kolkata%2C%20Howrah%2C%20West%20Bengal%2C%20India&dropoff[latitude]=22.593276&dropoff[longitude]=88.270277"><i
-                                    class="fa fa-taxi"></i>&nbsp;&nbsp;Book Uber</a>
-                        </div>
-                        <div class="col-md-6" style="padding: 5px;">
-                            <a class="btn btn-accent btn-small" id="btn-show-map"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Show
-                                map</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="rsvp text-center" id="rsvp">
-
-    <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
-                    </button>
-                    <div class="section-padding">
-                        <h3>Thank you!</h3>
-                        <p>We are glad to see you join us on our big day.</p>
-                        <div id="add-to-cal"></div>
-                    </div>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <h3>What are you waiting for?</h3>
-                <p>We would greatly appreciate if you could RSVP before 1st of December '25</p>
-                <form id="rsvp-form" class="rsvp-form"
-                      action=""
-                      method="POST">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-envelope"></i><input type="email" name="email" class=""
-                                                                     placeholder="Your email"
-                                                                     required>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-user"></i><input name="name" class=""
-                                                                 placeholder="Your name"
-                                                                 required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
-                                                                  max="4"
-                                                                  placeholder="Husband/Wife or kids"
-                                                                  required>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
-                                                                class="" min="0"
-                                                                placeholder="Invite code"
-                                                                required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12" id="alert-wrapper"></div>
-                    </div>
-                    <button class="btn-fill rsvp-btn">
-                        Yes,
-                        that's me!
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 text-center content">
-                <span class="to-top-wrapper"><a href="#top" class="to-top"><i class="fa fa-angle-up"></i></a></span>
-                <p>Crafted by Ravi with lots of <span class="fa fa-heart pulse2"></span> for Sam</p>
-            </div>
-        </div>
-    </div>
-</footer>
-<script src="js/vendor/jquery-1.11.2.min.js" onerror="loadJsFromCDN('jquery.js')"></script>
-<script src="node_modules/waypoints/lib/jquery.waypoints.min.js" onerror="loadJsFromCDN('waypoints.js')"></script>
-<script src="js/jquery.fancybox.pack.js"></script>
-<script src="js/vendor/bootstrap.min.js"></script>
-<script src="js/jquery.flexslider-min.js"></script>
-<script src="js/jquery.mb.YTPlayer.min.js"></script>
-<script src="js/vendor/ouical.js"></script>
-<script src="js/scripts.min.js"></script>
-<script src="js/clock.js"></script>
-<script src="js/jquery.countTo.js"></script>
-<script src='https://momentjs.com/downloads/moment.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.14/moment-timezone-with-data-2012-2022.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.js'></script>
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlPw3GQYI3faa_9mRE6plWuM7xNEmrwH0&callback=initMap"></script>
-<!-- Google Analytics -->
-<script>
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-    ga('create', 'UA-46465113-4', 'auto');
-    ga('send', 'pageview');
-</script>
-</body>
+	<!-- // <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script> -->
+	<script src="js/simplyCountdown.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+	<center><p>Crafted by Ravi with lots of <span class="fa fa-heart pulse2"></span> for Sam</p></center>
+	</body>
 </html>

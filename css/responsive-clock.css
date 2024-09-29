@@ -1,17 +1,5 @@
-/* General Flip Clock Wrapper Style */
-.flip-clock-wrapper {
-  margin: 4em !important;
-  font-family: "fontawesome", sans-serif !important; /* Use Font Awesome font family */
-}
 
-.flip-clock-divider .flip-clock-label {
-  color: white !important;
-  font-size: 14px !important;
-  font-weight: bold !important;
-  font-family: "fontawesome", sans-serif !important;
-}
 
-/* Media Queries for Responsive Font Size and Layout */
 @media screen and (max-width: 767px) {
   .flipTimebox .flip-clock-wrapper ul {
     height: 50px;
@@ -55,13 +43,11 @@
   }
   .flipTimebox .flip-clock-wrapper ul li a div div.inn {
     font-size: 38px;
-    font-family: "fontawesome", sans-serif !important;
   }
   .flipTimebox .flip-clock-meridium {
     font-size: 20px !important;
   }
 }
-
 @media screen and (max-width: 568px) {
   .flipTimebox .flip-clock-wrapper ul {
     margin: 2px;
@@ -89,12 +75,7 @@
   .flipTimebox .flip-clock-meridium {
     font-size: 18px !important;
   }
-  .flipTimebox .flip-clock-wrapper ul li a div div.inn {
-    font-size: 34px;
-    font-family: "fontawesome", sans-serif !important;
-  }
 }
-
 @media screen and (max-width: 480px) {
   .flipTimemodulesboxes {
     padding: 0;
@@ -116,7 +97,6 @@
   }
   .flipTimebox .flip-clock-wrapper ul li a div div.inn {
     font-size: 28px;
-    font-family: "fontawesome", sans-serif !important;
   }
   .flipTimebox .flip-clock-meridium {
     font-size: 14px !important;
@@ -137,7 +117,6 @@
     margin: 50px 0 100px 20px;
   }
 }
-
 @media screen and (max-width: 360px) {
   .flipTimebox .flip-clock-divider .flip-clock-label {
     font-size: 1em;
@@ -171,12 +150,7 @@
   .flipTimebox {
     margin: 50px 0 100px 20px;
   }
-  .flipTimebox .flip-clock-wrapper ul li a div div.inn {
-    font-size: 25px;
-    font-family: "fontawesome", sans-serif !important;
-  }
 }
-
 @media screen and (max-width: 320px) {
   .flipTimebox .flip-clock-wrapper {
     padding-left: 5px;
@@ -191,7 +165,7 @@
   .flipTimebox .flip-clock-dot {
     margin-left: -18px;
   }
-  .flipTimebox .flip-clock-divider.days .flip-clock-label {
+    .flipTimebox .flip-clock-divider.days .flip-clock-label {
     right: 3px;
   }
   .flipTimebox .flip-clock-divider.hours .flip-clock-label {
@@ -203,8 +177,15 @@
   .flipTimebox .flip-clock-divider.seconds .flip-clock-label {
     right: 14px;
   }
-  .flipTimebox .flip-clock-wrapper ul li a div div.inn {
-    font-size: 22px;
-    font-family: "fontawesome", sans-serif !important;
-  }
+}
+
+.flip-clock-wrapper {
+  margin: 4em !important;
+}
+
+.flip-clock-divider .flip-clock-label {
+  color: white !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  font-family: Sofia Sans Condensed !important; 
 }
