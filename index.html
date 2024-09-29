@@ -1,47 +1,72 @@
 <!doctype html>
+<!-- DOCTYPE declaration for HTML5 -->
+
 <!--[if lt IE 7]>
 <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!-- Conditional comment for Internet Explorer versions less than 7 -->
 <!--[if IE 7]>
 <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!-- Conditional comment for Internet Explorer version 7 -->
 <!--[if IE 8]>
 <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Conditional comment for Internet Explorer version 8 -->
 <!--[if gt IE 8]><!-->
 <html class="no-js" lang="en"> <!--<![endif]-->
+<!-- HTML element for modern browsers (IE9 and above, and other browsers) -->
+
 <head>
+    <!-- Metadata and page settings -->
     <meta charset="utf-8">
+    <!-- Character encoding set to UTF-8 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <title>Ravi & Sam are getting married!</title>
-    <meta name="description" content="We would like to invite you to our big day.">
+    <!-- Compatibility mode for Internet Explorer -->
+
+    <title>Ravi ❤️ Sam - 02.15.2025</title>
+    <!-- Page title -->
+
+    <meta name="description" content="Ravi and Sam wedding website.">
+    <!-- Description of the page -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Setting viewport for responsive design -->
+
     <meta name="theme-color" content="#ffffff">
-    <meta property="og:title" content="Ravi & Sam getting hitched">
-    <meta property="og:description" content="We would like to invite you to our big day.">
-    <meta property="og:image" content="https://wedding.ramswaroop.me/img/hero-min.jpg">
-    <meta property="og:type" content="website">
+    <!-- Setting the theme color for browsers on mobile devices -->
+
+    <!-- Icons for different platforms -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <!-- Apple touch icon for iOS devices -->
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <!-- Favicon for modern browsers -->
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <!-- Small favicon for older browsers -->
     <link rel="manifest" href="manifest.json">
+    <!-- Web app manifest for PWA (Progressive Web App) support -->
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <!-- Safari pinned tab icon -->
+
 
     <script>
-        // load css files from CDN if local node_modules fail
+        // Function to load CSS files from CDN if local versions from node_modules fail
         function loadCssFromCDN(css) {
-            // create new link tag
+            // Create a new link element
             const link = document.createElement('link');
+    
+            // Set the href attribute to the appropriate CDN link based on the CSS file name
             if (css === 'animate.css') {
                 link.href = 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css';
             } else if (css === 'font-awesome.css') {
                 link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
             }
-            link.rel = 'stylesheet';
-
-            // add link tag to head section
+            link.rel = 'stylesheet'; // Set the relationship to stylesheet
+    
+            // Append the link element to the head section of the document
             document.getElementsByTagName('head')[0].appendChild(link);
         }
-
-        // load js files from CDN if local node_modules fail
+    
+        // Function to load JavaScript files from CDN if local versions from node_modules fail
         function loadJsFromCDN(js) {
+            // Use document.write to insert a script tag for the required JavaScript file from CDN
             if (js === 'waypoints.js') {
                 document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"><\/script>');
             } else if (js === 'jquery.js') {
@@ -49,68 +74,104 @@
             }
         }
     </script>
-
+    
+    <!-- Link to CSS files for various styling and functionality -->
     <link rel="stylesheet" href="css/normalize.min.css">
+    <!-- Normalize.css to make browsers render all elements more consistently -->
+
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Bootstrap CSS for responsive layout and design components -->
+
     <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <!-- jQuery Fancybox CSS for creating lightbox effects -->
+
     <link rel="stylesheet" href="css/flexslider.css">
+    <!-- FlexSlider CSS for creating image sliders -->
+
     <link rel="stylesheet" href="css/styles.min.css">
+    <!-- Main CSS for overall website styling -->
+
     <link rel="stylesheet" href="css/queries.css">
+    <!-- CSS for handling media queries and responsive design -->
+
     <link rel="stylesheet" href="node_modules/animate.css/animate.min.css" onerror="loadCssFromCDN('animate.css')">
+    <!-- Animate.css for animation effects; fallback to CDN if loading fails -->
+
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" onerror="loadCssFromCDN('font-awesome.css')">
+    <!-- Font Awesome for icons; fallback to CDN if loading fails -->
+
+    <link rel="stylesheet" href="css/responsive-clock.css">
+    <!-- CSS for styling a responsive clock element -->
+
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.css'>
+    <!-- FlipClock CSS from CDN for clock styling -->
+
+    <!-- Script to load Modernizr and Respond.js -->
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <!-- Modernizr to detect HTML5 and CSS3 features, Respond.js for polyfilling media queries in older IE -->
 </head>
+
 <body id="top">
-<!--[if lt IE 8]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
-    your browser</a> to improve your experience.</p>
-<![endif]-->
-<section class="hero">
-    <section class="navigation">
-        <header>
-            <div class="header-content">
-                <div class="logo"><a href="#"><img src="img/logo.png" alt="Logo"></a></div>
-                <div class="header-nav">
-                    <nav>
-                        <ul class="primary-nav">
-                            <li><a href="#intro">How we met</a></li>
-                            <li><a href="#events">Events</a></li>
-                            <li><a href="#instagram">Instagram</a></li>
-                            <li><a href="#eng-pics">Engagement</a></li>
-                            <li class="hidden-sm hidden-xs"><a href="#video-bg">Glimpse of the city</a></li>
-                        </ul>
-                        <ul class="member-actions">
-                            <li><a href="#map" class="login">Venue</a></li>
-                            <li><a href="#rsvp" class="btn-white btn-small">RSVP</a></li>
-                        </ul>
-                    </nav>
+    <!-- Fallback message for outdated browsers, specifically for versions of Internet Explorer below 8 -->
+    <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+        your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Main hero section -->
+    <section class="hero">
+        <!-- Navigation section -->
+        <section class="navigation">
+            <header>
+                <div class="header-content">
+                    <!-- Logo -->
+                    <div class="logo"><a href="#"><img src="img/logo.png" class="pulse2" alt="Logo"></a></div>
+                    <!-- Header navigation links -->
+                    <div class="header-nav">
+                        <nav>
+                            <ul class="primary-nav">
+                                <li><a href="#events">Events and Details</a></li>
+                                <li><a href="#intro">How we met</a></li>
+                                <li><a href="#eng-gallery">Engagement Gallery</a></li>
+                                <li><a href="#travel-lodging">Travel and Lodging</a></li>
+                            </ul>
+                            <ul class="member-actions">
+                                <li><a href="#rsvp" class="btn-white btn-small">RSVP</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- Navigation toggle icon for mobile view -->
+                    <div class="navicon">
+                        <a class="nav-toggle" href="#"><span></span></a>
+                    </div>
                 </div>
-                <div class="navicon">
-                    <a class="nav-toggle" href="#"><span></span></a>
+            </header>
+        </section>
+
+        <!-- Main container for hero content -->
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="hero-content">
+                        <!-- Placeholder for heading and intro text (currently commented out) -->
+                        <!--<h1>Ravi and Sam</h1>-->
+                        <img src="img/logo-lg.png">
+                        <!--<p class="intro">Ravi ❤️ Sam - 02.15.2025</p>-->
+                        <!--<a href="#" class="btn btn-fill btn-large btn-margin-right">Scroll Down</a> -->
+
+                        <!-- Countdown Clock Section -->
+                        <div class="flipTimebox">
+                            <div class="clock clock-fix"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </header>
+        </div>
+
+        <!-- Down arrow for scrolling to invitation section -->
+        <div class="down-arrow floating-arrow"><a href="#invitation"><i class="fa fa-angle-down"></i></a></div>
     </section>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="hero-content text-center">
-                    <!--<h1>Ravi and Same</h1>-->
-                    <img src="img/logo-lg.png">
-                    <!--<p class="intro">Ravi & Sam are getting hitched!</p>-->
-                    <!--<a href="#" class="btn btn-fill btn-large btn-margin-right">Scroll Down</a> -->
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4 hidden-xs"></div>
-            <div class="col-sm-4 hidden-xs text-center"><a href="#rsvp"
-                                                           class="btn btn-accent btn-large rsvp-btn">RSVP</a></div>
-            <div class="col-sm-4 hidden-xs"></div>
-        </div>
-    </div>
-    <div class="down-arrow floating-arrow"><a href="#invitation"><i class="fa fa-angle-down"></i></a></div>
-</section>
+</body>
 
 <section id="invitation" class="section-padding">
     <div class="container">
@@ -500,6 +561,11 @@
 <script src="js/jquery.mb.YTPlayer.min.js"></script>
 <script src="js/vendor/ouical.js"></script>
 <script src="js/scripts.min.js"></script>
+<script src="js/clock.js"></script>
+<script src="js/jquery.countTo.js"></script>
+<script src='https://momentjs.com/downloads/moment.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.14/moment-timezone-with-data-2012-2022.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.js'></script>
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlPw3GQYI3faa_9mRE6plWuM7xNEmrwH0&callback=initMap"></script>
 <!-- Google Analytics -->

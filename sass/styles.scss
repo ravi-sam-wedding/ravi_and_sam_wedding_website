@@ -330,6 +330,7 @@ header {
       a {
         color: $txt-light;
         padding-right: 25px;
+        font-size: 1.2em;
 
         &:hover {
           color: $accent-color;
@@ -794,7 +795,7 @@ RSVP form
       padding: 15px 0;
       border-radius: 3px;
       width: 100%;
-      font-size: 13px;
+      font-size: 1.2em;
     }
     .form-input-group {
       width: 100%;
