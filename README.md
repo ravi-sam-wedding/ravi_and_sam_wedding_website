@@ -1,6 +1,13 @@
-# Ravi and Sam Wedding Website
+# Ravi and Sam Wedding Website Setup
 
-## Steup up
-### $ npm install - install dependencies 
-### $ gulp - compile sass to css, minify js, etc.
-### $ firefox index.html - launch locally compiled webpage
+## Step-by-Step Guide
+
+1. **Install Dependencies**
+   ```sh
+   npm install
+2. **Compile sass to css, minify js, etc.**
+   ```sh
+   gulp
+3. **Launch locally compiled webpage in your browser**
+   ```sh
+   firefox index.html
