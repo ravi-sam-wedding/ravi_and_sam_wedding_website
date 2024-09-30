@@ -197,7 +197,7 @@ $(document).ready(function () {
             end: new Date('Feb 16, 2025 00:00'),
 
             // Event Address
-            address: 'ITC Fortune Park Hotel, Kolkata',
+            address: 'I dont remember',
 
             // Event Description
             description: "We can't wait to see you on our big day. For any queries or issues, please contact Mr. Amit Roy at +91 9876543210."

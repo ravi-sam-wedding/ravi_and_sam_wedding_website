@@ -330,7 +330,7 @@ header {
       a {
         color: $txt-light;
         padding-right: 25px;
-        font-size: 1.2em;
+        font-size: 1.5em;
 
         &:hover {
           color: $accent-color;
@@ -795,7 +795,6 @@ RSVP form
       padding: 15px 0;
       border-radius: 3px;
       width: 100%;
-      font-size: 1.2em;
     }
     .form-input-group {
       width: 100%;
@@ -807,7 +806,7 @@ RSVP form
       border: solid 1px $keyline-color;
       text-align: left;
       position: relative;
-
+    
       i {
         color: $accent-color;
         font-size: 14px;
@@ -822,7 +821,7 @@ RSVP form
         left: 30px;
         transform: translateY(-50%);
       }
-      i.fa-user, i.fa-users, i.fa-envelope, .fa-key {
+      i.fa-user, i.fa-users, i.fa-envelope, .fa-key, i.fa-glass, i.fa-birthday-cake {
         font-size: 14px;
         position: absolute;
         top: 50%;
@@ -839,16 +838,16 @@ RSVP form
         border: none;
       }
       input::-webkit-input-placeholder {
-        color: $form-placeholder;
+        color: #666; // Set to a darker shade, e.g., #666
       }
       input:-moz-placeholder {
-        color: $form-placeholder;
+        color: #666;
       }
       input::-moz-placeholder {
-        color: $form-placeholder;
+        color: #666;
       }
       input:-ms-input-placeholder {
-        color: $form-placeholder;
+        color: #666;
       }
     }
   }

@@ -4,6 +4,11 @@
   font-family: "fontawesome", sans-serif !important; /* Use Font Awesome font family */
 }
 
+/* Adjust the clock position closer to the logo */
+.flipTimebox {
+  margin-top: 10px; /* Reduced to bring the clock closer to the logo */
+}
+
 .flip-clock-divider .flip-clock-label {
   color: white !important;
   font-size: 14px !important;
