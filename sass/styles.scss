@@ -323,19 +323,20 @@ header {
   ul.primary-nav {
     margin: 0 0 0 75px;
     padding: 0;
-
+  
     li {
       display: inline;
-
+  
       a {
-        color: $txt-light;
+        color: #e5ded2;
         padding-right: 25px;
         font-size: 1.2em;
-
+  
         &:hover {
-          color: $accent-color;
+          color: #5d6860;
         }
       }
+  
       &:last-child a {
         padding-right: 0px;
       }

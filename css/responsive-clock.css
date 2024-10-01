@@ -27,15 +27,9 @@
   .flipTimebox .flip-clock-dot.bottom {
     bottom: 8px;
   }
-  .flipTimebox .flip-clock-divider.days .flip-clock-label {
-    right: calc(-50% - 10px);
-  }
-  .flipTimebox .flip-clock-divider.hours .flip-clock-label {
-    right: calc(-50% - 10px);
-  }
-  .flipTimebox .flip-clock-divider.minutes .flip-clock-label {
-    right: calc(-50% - 10px);
-  }
+  .flipTimebox .flip-clock-divider.days .flip-clock-label,
+  .flipTimebox .flip-clock-divider.hours .flip-clock-label,
+  .flipTimebox .flip-clock-divider.minutes .flip-clock-label,
   .flipTimebox .flip-clock-divider.seconds .flip-clock-label {
     right: calc(-50% - 10px);
   }
@@ -102,7 +96,12 @@
     margin-left: -10px;
   }
   .flipTimebox {
-    margin: 50px 0 100px 20px;
+    margin: 50px auto 100px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: fit-content;
   }
 }
 
@@ -126,7 +125,12 @@
     margin-left: -16px;
   }
   .flipTimebox {
-    margin: 50px 0 100px 20px;
+    margin: 50px auto 100px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: fit-content;
   }
 }
 
@@ -147,15 +151,25 @@
   .flipTimebox .flip-clock-divider .flip-clock-label {
     right: calc(-50% - 5px);
   }
+  .flipTimebox {
+    margin: 50px auto 100px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: fit-content;
+  }
 }
 
 .flip-clock-wrapper {
-  margin: 4em !important;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 
 .flip-clock-divider .flip-clock-label {
-  color: white !important;
-  font-size: 14px !important;
+  color: #e5ded2 !important;
+  font-size: 20px !important;
   font-weight: bold !important;
   font-family: "fontawesome" Condensed !important; 
   position: relative;
