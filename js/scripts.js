@@ -13,7 +13,6 @@ const guestList = {
     }
 };
 $(document).ready(function () {
-    console.log(guestList);
     /***************** Waypoints ******************/
 
     $('.wp1').waypoint(function () {
