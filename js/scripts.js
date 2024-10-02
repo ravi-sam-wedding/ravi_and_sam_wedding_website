@@ -1,5 +1,19 @@
+const guestList = {
+    "320b8e6bef45211f0f57b618925f4193": {
+        "plusOneAllowed": true
+    },
+    "ef6efb883f04c896c1ec82f4edc6c2c7": {
+        "plusOneAllowed": false
+    },
+    "cfaacad948797d852116bb2265904052": {
+        "plusOneAllowed": true
+    },
+    "0c9bb145b0db9c161c084090d1970036": {
+        "plusOneAllowed": false
+    }
+};
 $(document).ready(function () {
-
+    console.log(guestList);
     /***************** Waypoints ******************/
 
     $('.wp1').waypoint(function () {
@@ -177,15 +191,27 @@ $(document).ready(function () {
     /********************** RSVP **********************/
     $('#rsvp-form').on('submit', function (e) {
         e.preventDefault();
-        var data = $(this).serialize();
-
+        var formData = $(this).serialize();
+    
         $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
-
-        if (MD5($('#invite_code').val()) !== 'e10adc3949ba59abbe56e057f20f883e'
-            && MD5($('#invite_code').val()) !== 'c33367701511b4f6020ec61ded352059') {
-            $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
-        } else {
-            $.post('https://script.google.com/macros/s/AKfycbyi_NC30yY21CXWj0vbddY3ZezlwwOFCszRjfj1LpdJ7MV-EmUfn-5kzBpPNxjA8PZ7WQ/exec', data)
+    
+        // Get the user's name from the form
+        var name = $('input[name="name"]').val().trim().toLowerCase();
+        var hashedName = MD5(name); // Use the MD5 function to hash the input name
+    
+        // Check if the hashed name is in the guest list
+        if (guestList[hashedName]) {
+            if (guestList[hashedName].plusOneAllowed) {
+                // If plus one is allowed, prompt for the plus one name
+                var plusOneName = prompt('You are allowed to bring a plus one. Please enter their name or (N/A):');
+                if (plusOneName) {
+                    // Add the plus one name to formData
+                    formData += '&plus_one=' + encodeURIComponent(plusOneName);
+                }
+            }
+    
+            // Proceed to submit the form data
+            $.post('https://script.google.com/macros/s/AKfycbyi_NC30yY21CXWj0vbddY3ZezlwwOFCszRjfj1LpdJ7MV-EmUfn-5kzBpPNxjA8PZ7WQ/exec', formData)
                 .done(function (data) {
                     console.log(data);
                     if (data.result === "error") {
@@ -197,13 +223,14 @@ $(document).ready(function () {
                 })
                 .fail(function (data) {
                     console.log(data);
-                    $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
+                    $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server.'));
                 });
+        } else {
+            // Show an error if the name is not found in the guest list
+            $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your name is not on the guest list.'));
         }
-    });
-
-});
-
+    });  
+});    
 /********************** Extras **********************/
 
 // alert_markup

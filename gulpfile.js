@@ -6,6 +6,22 @@ var sass = require('gulp-sass')(require('sass')); // Gulp-Sass for compiling SCS
 var terser = require('gulp-terser'); // Gulp-Terser for minifying JavaScript files
 var cleanCSS = require('gulp-clean-css'); // Gulp-Clean-CSS for minifying CSS files
 var rename = require('gulp-rename'); // Gulp-Rename for renaming files
+var replace = require('gulp-replace'); // Gulp-Replace for replacing text in files
+var fs = require('fs'); // Node.js File System module for reading files
+var crypto = require('crypto'); // Node.js Crypto module for generating MD5 hashes
+
+// Task to generate guestList JSON and embed it into scripts.js
+gulp.task('generate-guestlist', function () {
+    // Read guestList
+    const guestListJson = fs.readFileSync('guestList.json', 'utf8');
+
+    return gulp.src('js/scripts.js', { allowEmpty: true })
+        // Remove any previous guest list definition by wiping out the placeholder line
+        .pipe(replace(/const guestList = .*;/, '/* GUESTLIST_PLACEHOLDER */'))
+        // Replace placeholder with the new guest list
+        .pipe(replace('/* GUESTLIST_PLACEHOLDER */', `const guestList = ${guestListJson};`))
+        .pipe(gulp.dest('js')); // Write the output back to the 'js' folder
+});
 
 // Task to compile all SCSS files to compressed CSS, excluding already minified files
 gulp.task('sass', function () {
@@ -36,5 +52,5 @@ gulp.task('minify-js', function () {
         .pipe(gulp.dest('./js')); // Output the minified JavaScript to the 'js' directory
 });
 
-// Default task that runs 'sass', 'minify-css', and 'minify-js' tasks
-gulp.task('default', gulp.series('sass', 'minify-css', 'minify-js')); // Run 'sass', 'minify-css', and 'minify-js' in sequence when 'gulp' is executed without arguments
+// Default task that runs 'sass', 'minify-css', 'minify-js', and 'generate-guestlist' tasks
+gulp.task('default', gulp.series('generate-guestlist', 'sass', 'minify-css', 'minify-js')); // Run all tasks in sequence when 'gulp' is executed without arguments
