@@ -1,11 +1,13 @@
 // Typography partial
 @import "partials/colors";
+@import url('https://fonts.googleapis.com/css?family=Sacramento');
 
 // Fonts
 
 $sans-serif: 'Open Sans', sans-serif;
 $serif: Merriweather, Georgia, 'Times New Roman', serif;
 $accent-font: 'Nunito', sans-serif;
+$h2-font: 'Sacramento', cursive;
 
 // Weights
 
@@ -17,7 +19,7 @@ $bold: 700;
 // Sizes
 
 $font-size-h1: 60px;
-$font-size-h2: 40px;
+$font-size-h2: 60px;
 $font-size-h3: 24px;
 $font-size-h4: 18px;
 $font-size-h5: 15px;
@@ -53,6 +55,7 @@ h2 {
   font-size: $font-size-h2;
   font-weight: $light;
   color: $h2-color;
+  font-family: $h2-font;
 }
 
 h3 {

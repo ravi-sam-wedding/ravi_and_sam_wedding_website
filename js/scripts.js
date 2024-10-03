@@ -188,6 +188,32 @@ $(document).ready(function () {
 
 
     /********************** RSVP **********************/
+    // Initially disable the submit button
+    $('.rsvp-btn').prop('disabled', true);
+
+    // Event listener for when the user finishes typing their name
+    $('input[name="name"]').on('blur', function () {
+        var name = $(this).val().trim().toLowerCase();
+        if (name) {
+            var hashedName = MD5(name); // Use the MD5 function to hash the input name
+
+            // Check if the hashed name is in the guest list
+            if (!guestList[hashedName]) {
+                // Show a warning if the name is not found in the guest list
+                $('#alert-wrapper').html(alert_markup('warning', '<strong>Note:</strong> Your name is not on the guest list. Please check the spelling or contact us.'));
+                $('.rsvp-btn').prop('disabled', true); // Disable the submit button
+            } else {
+                // Clear the alert if the name is on the guest list
+                $('#alert-wrapper').html('');
+                $('.rsvp-btn').prop('disabled', false); // Enable the submit button
+            }
+        } else {
+            // If the input field is empty, disable the submit button
+            $('.rsvp-btn').prop('disabled', true);
+        }
+    });
+
+
     $('#rsvp-form').on('submit', function (e) {
         e.preventDefault();
         var formData = $(this).serialize();

@@ -290,6 +290,7 @@ Hero
   position: fixed;
   width: 100%;
   z-index: 999;
+  background-color: rgba(93, 104, 96, 0.1);
 }
 .fixed {
   position: fixed;
@@ -333,7 +334,7 @@ header {
         font-size: 1.2em;
   
         &:hover {
-          color: #5d6860;
+          color: #b19b64;
         }
       }
   
