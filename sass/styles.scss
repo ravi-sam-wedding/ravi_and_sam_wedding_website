@@ -399,6 +399,8 @@ Social share buttons
   color: white; /* Ensure the text is visible over the images */
   z-index: 2;
   background: transparent; /* Remove the background color */
+  overflow-y: auto; /* Allow scrolling if the text is too long */
+  max-height: 100%; /* Ensure it doesn’t exceed the parent height */
 }
 
 /* ==========================================================================
