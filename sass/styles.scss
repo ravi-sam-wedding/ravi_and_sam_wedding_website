@@ -163,14 +163,15 @@ Animations
 Waypoinsts
 ========================================================================== */
 .wp1, .wp2, .wp3, .wp4, .wp5, .wp6, .wp7, .wp8, .wp9 {
-  visibility: hidden
+  visibility: hidden;
 }
 .wp8, .wp9 {
   -webkit-animation-delay: 0.3s;
-  animation-delay: 0.3s
+  animation-delay: 0.3s;
+  opacity: 0.05 !important;/* Adjust the transparency (0 is fully transparent, 1 is fully opaque) */
 }
 .bounceInLeft, .bounceInRight, .fadeInUp, .fadeInUpDelay, .fadeInDown, .fadeInUpD, .fadeInLeft, .fadeInRight, .bounceInDown {
-  visibility: visible
+  visibility: visible;
 }
 
 /* ==========================================================================
@@ -329,12 +330,12 @@ header {
       display: inline;
   
       a {
-        color: #e5ded2;
+        color: #fff;
         padding-right: 25px;
         font-size: 1.2em;
   
         &:hover {
-          color: #b19b64;
+          color: #e8ca6f;
         }
       }
   
@@ -378,8 +379,26 @@ header {
 /* ==========================================================================
 Social share buttons
 ========================================================================== */
-.share-bar {
-  margin-top: 20px;
+.no-gutter {
+  margin-right: 1px;
+  margin-left: 1px;
+}
+
+.no-padding img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  color: white; /* Ensure the text is visible over the images */
+  z-index: 2;
+  background: transparent; /* Remove the background color */
 }
 
 /* ==========================================================================
