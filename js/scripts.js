@@ -191,26 +191,111 @@ $(document).ready(function () {
     // Initially disable the submit button
     $('.rsvp-btn').prop('disabled', true);
 
-    // Event listener for when the user finishes typing their name
-    $('input[name="name"]').on('blur', function () {
-        var name = $(this).val().trim().toLowerCase();
-        if (name) {
-            var hashedName = MD5(name); // Use the MD5 function to hash the input name
+    var hasFocusedName = false;
+    var hasFocusedEmail = false;
+    var hasFocusedWelcomeDinner = false;
+    var hasFocusedCeremonyReception = false;
 
-            // Check if the hashed name is in the guest list
-            if (!guestList[hashedName]) {
-                // Show a warning if the name is not found in the guest list
-                $('#alert-wrapper').html(alert_markup('warning', '<strong>Note:</strong> Your name is not on the guest list. Please check the spelling or contact us.'));
-                $('.rsvp-btn').prop('disabled', true); // Disable the submit button
+    // Function to validate all fields
+    function validateForm() {
+        var name = $('input[name="name"]').val().trim().toLowerCase();
+        var email = $('input[name="email"]').val().trim();
+        var welcomeDinner = $('input[name="welcome_dinner"]').val().trim().toLowerCase();
+        var ceremonyReception = $('input[name="ceremony_reception"]').val().trim().toLowerCase();
+
+        // Email validation regex
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        // Clear any previous alerts
+        $('#alert-wrapper').html('');
+
+        // Only check the name field if the user has interacted with it
+        if (hasFocusedName) {
+            if (name) {
+                var hashedName = MD5(name); // Use the MD5 function to hash the input name
+
+                // Check if the hashed name is in the guest list
+                if (!guestList[hashedName]) {
+                    // Show a note if the name is not found in the guest list
+                    $('#alert-wrapper').html(alert_markup('warning', '<strong>Note:</strong> Your name is not on the guest list. Please check the spelling or contact us.'));
+                    $('.rsvp-btn').prop('disabled', true); // Disable the submit button
+                    return false; // Stop validation if this check fails
+                }
             } else {
-                // Clear the alert if the name is on the guest list
-                $('#alert-wrapper').html('');
-                $('.rsvp-btn').prop('disabled', false); // Enable the submit button
+                // If the name input is empty, disable the submit button
+                $('.rsvp-btn').prop('disabled', true);
+                return false;
             }
-        } else {
-            // If the input field is empty, disable the submit button
-            $('.rsvp-btn').prop('disabled', true);
         }
+
+        // Only check the email field if the user has interacted with it
+        if (hasFocusedEmail) {
+            if (!emailPattern.test(email)) {
+                $('#alert-wrapper').html(alert_markup('warning', '<strong>Note:</strong> Please enter a valid email address.'));
+                $('.rsvp-btn').prop('disabled', true); // Disable the submit button
+                return false; // Stop validation if this check fails
+            }
+        }
+
+        // Only check the welcome_dinner field if the user has interacted with it
+        if (hasFocusedWelcomeDinner) {
+            if (welcomeDinner !== 'yes' && welcomeDinner !== 'no') {
+                $('#alert-wrapper').html(alert_markup('warning', '<strong>Note:</strong> Welcome dinner must be "yes" or "no".'));
+                $('.rsvp-btn').prop('disabled', true); // Disable the submit button
+                return false; // Stop validation if this check fails
+            }
+        }
+
+        // Only check the ceremony_reception field if the user has interacted with it
+        if (hasFocusedCeremonyReception) {
+            if (ceremonyReception !== 'yes' && ceremonyReception !== 'no') {
+                $('#alert-wrapper').html(alert_markup('warning', '<strong>Note:</strong> Ceremony reception must be "yes" or "no".'));
+                $('.rsvp-btn').prop('disabled', true); // Disable the submit button
+                return false; // Stop validation if this check fails
+            }
+        }
+
+        // If all checks pass, enable the submit button
+        $('.rsvp-btn').prop('disabled', false);
+        return true;
+    }
+
+    // Track if the user has focused on name input
+    $('input[name="name"]').on('focus', function () {
+        hasFocusedName = true;
+    });
+
+    // Track if the user has focused on email input
+    $('input[name="email"]').on('focus', function () {
+        hasFocusedEmail = true;
+    });
+
+    // Track if the user has focused on welcome_dinner input
+    $('input[name="welcome_dinner"]').on('focus', function () {
+        hasFocusedWelcomeDinner = true;
+    });
+
+    // Track if the user has focused on ceremony_reception input
+    $('input[name="ceremony_reception"]').on('focus', function () {
+        hasFocusedCeremonyReception = true;
+    });
+
+    // Event listener for when the user finishes typing in any field
+    $('input[name="name"], input[name="email"], input[name="welcome_dinner"], input[name="ceremony_reception"]').on('blur', function () {
+        validateForm();
+    });
+
+    // Disable form submission if the validation fails at any point
+    $('#rsvp-form').on('submit', function (e) {
+        if (!validateForm()) {
+            e.preventDefault();  // Prevent form submission if validation fails
+        }
+    });
+
+    // Optional: Event listeners for other fields (email, welcome_dinner, and ceremony_reception) if you want live validation on those as well
+    $('input[name="email"], input[name="welcome_dinner"], input[name="ceremony_reception"]').on('blur', function () {
+        // Trigger the name blur event to recheck all fields when any of these fields change
+        $('input[name="name"]').trigger('blur');
     });
 
 
