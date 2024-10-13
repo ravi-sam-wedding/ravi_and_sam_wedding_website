@@ -165,7 +165,7 @@
   .flipTimebox .flip-clock-dot {
     margin-left: -18px;
   }
-    .flipTimebox .flip-clock-divider.days .flip-clock-label {
+  .flipTimebox .flip-clock-divider.days .flip-clock-label {
     right: 3px;
   }
   .flipTimebox .flip-clock-divider.hours .flip-clock-label {
@@ -187,5 +187,5 @@
   color: white !important;
   font-size: 18px !important;
   font-weight: bold !important;
-  font-family: "fontawesome" Condensed !important; 
+  font-family: 'fontawesome' Condensed !important;
 }

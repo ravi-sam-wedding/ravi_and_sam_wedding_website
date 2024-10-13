@@ -16,7 +16,11 @@
 @font-face {
   font-family: 'fontawesome';
   src: url('../fonts/fontawesome-webfont.eot');
-  src: url('../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff') format('woff'), url('../fonts/fontawesome-webfont.ttf') format('truetype'), url('../fonts/fontawesome-webfont.svg#flexslider-icon') format('svg');
+  src:
+    url('../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/fontawesome-webfont.woff') format('woff'),
+    url('../fonts/fontawesome-webfont.ttf') format('truetype'),
+    url('../fonts/fontawesome-webfont.svg#flexslider-icon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,10 +28,16 @@
 /* ====================================================================================================================
  * RESETS
  * ====================================================================================================================*/
-.flex-container a:hover, .flex-slider a:hover, .flex-container a:focus, .flex-slider a:focus {
+.flex-container a:hover,
+.flex-slider a:hover,
+.flex-container a:focus,
+.flex-slider a:focus {
   outline: none;
 }
-.slides, .slides > li, .flex-control-nav, .flex-direction-nav {
+.slides,
+.slides > li,
+.flex-control-nav,
+.flex-direction-nav {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -52,7 +62,7 @@
   display: block;
 }
 .flexslider .slides:after {
-  content: "\0020";
+  content: '\0020';
   display: block;
   clear: both;
   visibility: hidden;
@@ -127,7 +137,7 @@ html[xmlns] .flexslider .slides {
   transition: all 0.3s ease-in-out;
 }
 .flex-direction-nav a:before {
-  font-family: "fontawesome";
+  font-family: 'fontawesome';
   font-size: 60px;
   display: inline-block;
   content: '\f104';
@@ -176,7 +186,7 @@ html[xmlns] .flexslider .slides {
   color: #000;
 }
 .flex-pauseplay a:before {
-  font-family: "fontawesome";
+  font-family: 'fontawesome';
   font-size: 20px;
   display: inline-block;
   content: '\f04c';
@@ -203,7 +213,7 @@ html[xmlns] .flexslider .slides {
   width: 12px;
   height: 12px;
   display: block;
-  background: #5C5F6A;
+  background: #5c5f6a;
   background: rgba(92, 95, 106, 1);
   cursor: pointer;
   text-indent: -9999px;
@@ -240,7 +250,7 @@ html[xmlns] .flexslider .slides {
   width: 100%;
   height: auto;
   display: block;
-  opacity: .7;
+  opacity: 0.7;
   cursor: pointer;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
@@ -259,7 +269,7 @@ html[xmlns] .flexslider .slides {
 /* ====================================================================================================================
  * RESPONSIVE
  * ====================================================================================================================*/
-@media screen and (max-width:860px) {
+@media screen and (max-width: 860px) {
   .flex-direction-nav .flex-prev {
     display: none;
   }

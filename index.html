@@ -11,418 +11,606 @@
 <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!-- Conditional comment for Internet Explorer version 8 -->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang="en"> <!--<![endif]-->
-<!-- HTML element for modern browsers (IE9 and above, and other browsers) -->
+<html class="no-js" lang="en">
+  <!--<![endif]-->
+  <!-- HTML element for modern browsers (IE9 and above, and other browsers) -->
 
-<head>
+  <head>
     <!-- Metadata and page settings -->
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <!-- Character encoding set to UTF-8 -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- Compatibility mode for Internet Explorer -->
 
     <title>Ravi ❤️ Sam - 02.15.2025</title>
     <!-- Page title -->
 
-    <meta name="description" content="Ravi and Sam wedding website."/>
+    <meta name="description" content="Ravi and Sam wedding website." />
     <!-- Description of the page -->
 
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Setting viewport for responsive design -->
 
-    <meta name="theme-color" content="#ffffff"/>
+    <meta name="theme-color" content="#ffffff" />
     <!-- Setting the theme color for browsers on mobile devices -->
 
-    <meta property="og:image:width" content="300"/>
-    <meta property="og:image:height" content="300"/>
-    
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+
     <!-- Icons for different platforms -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png"/>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/icons/apple-touch-icon.png"
+    />
     <!-- Apple touch icon for iOS devices -->
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png"/>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/icons/favicon-32x32.png"
+    />
     <!-- Favicon for modern browsers -->
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png"/>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/icons/favicon-16x16.png"
+    />
     <!-- Small favicon for older browsers -->
-    <link rel="manifest" href="assets/manifest/manifest.json"/>
+    <link rel="manifest" href="assets/manifest/manifest.json" />
     <!-- Web app manifest for PWA (Progressive Web App) support -->
-    <link rel="mask-icon" href="assets/icons/safari-pinned-tab.svg" color="#5bbad5"/>
+    <link
+      rel="mask-icon"
+      href="assets/icons/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
     <!-- Safari pinned tab icon -->
 
-
     <script>
-        // Function to load CSS files from CDN if local versions from node_modules fail
-        function loadCssFromCDN(css) {
-            // Create a new link element
-            const link = document.createElement('link');
-    
-            // Set the href attribute to the appropriate CDN link based on the CSS file name
-            if (css === 'animate.css') {
-                link.href = 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css';
-            } else if (css === 'font-awesome.css') {
-                link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
-            }
-            link.rel = 'stylesheet'; // Set the relationship to stylesheet
-    
-            // Append the link element to the head section of the document
-            document.getElementsByTagName('head')[0].appendChild(link);
+      // Function to load CSS files from CDN if local versions from node_modules fail
+      function loadCssFromCDN(css) {
+        // Create a new link element
+        const link = document.createElement('link');
+
+        // Set the href attribute to the appropriate CDN link based on the CSS file name
+        if (css === 'animate.css') {
+          link.href =
+            'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css';
+        } else if (css === 'font-awesome.css') {
+          link.href =
+            'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
         }
-    
-        // Function to load JavaScript files from CDN if local versions from node_modules fail
-        function loadJsFromCDN(js) {
-            // Use document.write to insert a script tag for the required JavaScript file from CDN
-            if (js === 'waypoints.js') {
-                document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"><\/script>');
-            } else if (js === 'jquery.js') {
-                document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"><\/script>');
-            }
+        link.rel = 'stylesheet'; // Set the relationship to stylesheet
+
+        // Append the link element to the head section of the document
+        document.getElementsByTagName('head')[0].appendChild(link);
+      }
+
+      // Function to load JavaScript files from CDN if local versions from node_modules fail
+      function loadJsFromCDN(js) {
+        // Use document.write to insert a script tag for the required JavaScript file from CDN
+        if (js === 'waypoints.js') {
+          document.write(
+            '<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"><\/script>'
+          );
+        } else if (js === 'jquery.js') {
+          document.write(
+            '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"><\/script>'
+          );
         }
+      }
     </script>
-    
+
     <!-- Link to CSS files for various styling and functionality -->
-    <link rel="stylesheet" href="css/normalize.min.css"/>
+    <link rel="stylesheet" href="css/normalize.min.css" />
     <!-- Normalize.css to make browsers render all elements more consistently -->
 
-    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
     <!-- Bootstrap CSS for responsive layout and design components -->
 
-    <link rel="stylesheet" href="css/jquery.fancybox.css"/>
+    <link rel="stylesheet" href="css/jquery.fancybox.css" />
     <!-- jQuery Fancybox CSS for creating lightbox effects -->
 
-    <link rel="stylesheet" href="css/flexslider.css"/>
+    <link rel="stylesheet" href="css/flexslider.css" />
     <!-- FlexSlider CSS for creating image sliders -->
 
-    <link rel="stylesheet" href="css/styles.min.css"/>
+    <link rel="stylesheet" href="css/styles.min.css" />
     <!-- Main CSS for overall website styling -->
 
-    <link rel="stylesheet" href="css/queries.css"/>
+    <link rel="stylesheet" href="css/queries.css" />
     <!-- CSS for handling media queries and responsive design -->
 
-    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css" onerror="loadCssFromCDN('animate.css')"/>
+    <link
+      rel="stylesheet"
+      href="node_modules/animate.css/animate.min.css"
+      onerror="loadCssFromCDN('animate.css')"
+    />
     <!-- Animate.css for animation effects; fallback to CDN if loading fails -->
 
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" onerror="loadCssFromCDN('font-awesome.css')"/>
+    <link
+      rel="stylesheet"
+      href="node_modules/font-awesome/css/font-awesome.min.css"
+      onerror="loadCssFromCDN('font-awesome.css')"
+    />
     <!-- Font Awesome for icons; fallback to CDN if loading fails -->
 
-    <link rel="stylesheet" href="css/responsive-clock.css"/>
+    <link rel="stylesheet" href="css/responsive-clock.css" />
     <!-- CSS for styling a responsive clock element -->
 
-	<link rel="stylesheet" href="css/icomoon.css"/>
+    <link rel="stylesheet" href="css/icomoon.css" />
     <!-- Icomoon Icon Fonts-->
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.css"
+    />
     <!-- FlipClock CSS from CDN for clock styling -->
 
     <!-- Script to load Modernizr and Respond.js -->
     <script src="js/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     <!-- Modernizr to detect HTML5 and CSS3 features, Respond.js for polyfilling media queries in older IE -->
-</head>
+  </head>
 
-<body id="top">
+  <body id="top">
     <!-- Fallback message for outdated browsers, specifically for versions of Internet Explorer below 8 -->
     <!--[if lt IE 8]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
-        your browser</a> to improve your experience.</p>
+      <p class="browserupgrade">
+        You are using an
+        <strong>outdated</strong>
+        browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a>
+        to improve your experience.
+      </p>
     <![endif]-->
 
     <!-- Main hero section -->
     <section class="hero">
-        <!-- Navigation section -->
-        <section class="navigation">
-            <header>
-                <div class="header-content">
-                    <!-- Logo -->
-                    <div class="logo"><a href="#"><img src="img/logo.png" class="pulse2" alt="Logo"/></a></div>
-                    <!-- Header navigation links -->
-                    <div class="header-nav">
-                        <nav>
-                            <ul class="primary-nav">
-                                <li><a href="#events" style="font-weight: bold;">Events and Details</a></li>
-                                <li><a href="#intro" style="font-weight: bold;">How we met</a></li>
-                                <li><a href="#eng-pics" style="font-weight: bold;">Engagement Gallery</a></li>
-                                <li><a href="#travel-lodging" style="font-weight: bold;">Travel and Lodging</a></li>
-                                <li><a href="#registry" style="font-weight: bold;">Registry</a></li>
-                            </ul>
-                            <ul class="member-actions">
-                                <li><a href="#rsvp" class="btn-white btn-large"><strong>RSVP</strong></a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <!-- Navigation toggle icon for mobile view -->
-                    <div class="navicon">
-                        <a class="nav-toggle" href="#"><span></span></a>
-                    </div>
-                </div>
-            </header>
-        </section>
-
-        <!-- Main container for hero content -->
-        <div class="container text-center">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2 text-center">
-                    <div class="hero-content">
-                        <!-- Placeholder for heading and intro text (currently commented out) -->
-                        <!--<h1>Ravi and Sam</h1>-->
-                        <img src="img/logo-lg.png"/>
-                        <!--<p class="intro">Ravi ❤️ Sam - 02.15.2025</p>-->
-                        <!--<a href="#" class="btn btn-fill btn-large btn-margin-right">Scroll Down</a> -->
-
-                    </div>
-                </div>
+      <!-- Navigation section -->
+      <section class="navigation">
+        <header>
+          <div class="header-content">
+            <!-- Logo -->
+            <div class="logo">
+              <a href="#">
+                <img src="img/logo.png" class="pulse2" alt="Logo" />
+              </a>
             </div>
-        </div>
+            <!-- Header navigation links -->
+            <div class="header-nav">
+              <nav>
+                <ul class="primary-nav">
+                  <li>
+                    <a href="#events" style="font-weight: bold">
+                      Events and Details
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#intro" style="font-weight: bold">How we met</a>
+                  </li>
+                  <li>
+                    <a href="#eng-pics" style="font-weight: bold">
+                      Engagement Gallery
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#travel-lodging" style="font-weight: bold">
+                      Travel and Lodging
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#registry" style="font-weight: bold">Registry</a>
+                  </li>
+                </ul>
+                <ul class="member-actions">
+                  <li>
+                    <a href="#rsvp" class="btn-white btn-large">
+                      <strong>RSVP</strong>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <!-- Navigation toggle icon for mobile view -->
+            <div class="navicon">
+              <a class="nav-toggle" href="#"><span></span></a>
+            </div>
+          </div>
+        </header>
+      </section>
 
-        <!-- Down arrow for scrolling to invitation section -->
-        <div class="down-arrow floating-arrow"><a href="#invitation"><i class="fa fa-angle-down"></i></a></div>
-    </section>
-</body>
-
-<section class="events section-padding" id="events">
-    <div class="container">
+      <!-- Main container for hero content -->
+      <div class="container text-center">
         <div class="row">
-            <!-- Section Heading -->
-            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-                <h2>Events</h2>
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <div class="hero-content">
+              <!-- Placeholder for heading and intro text (currently commented out) -->
+              <!--<h1>Ravi and Sam</h1>-->
+              <img src="img/logo-lg.png" />
+              <!--<p class="intro">Ravi ❤️ Sam - 02.15.2025</p>-->
+              <!--<a href="#" class="btn btn-fill btn-large btn-margin-right">Scroll Down</a> -->
             </div>
+          </div>
         </div>
-        <div class="row" style="margin-top: 50px;">
-            <!-- First Event: Welcome Dinner -->
-            <div class="col-md-6 col-sm-12 text-center" style="margin-bottom: 30px;">
-                <div class="event-wrap animate-box wp1" style="border: 2px solid #ccc; padding: 20px; border-radius: 10px;">
-                    <h3>Welcome Dinner</h3>
-                    <!-- Event Date -->
-                    <div class="event-col">
-                        <i class="fa fa-calendar"></i>
-                        <span>February 14, 2025</span>
-                    </div>
-                    <!-- Event Time -->
-                    <div class="event-col">
-                        <i class="fa fa-clock-o"></i>
-                        <span>6:00 PM - 9:00 PM</span>
-                    </div>
-                    <div id="add-welcome-dinner"></div>
-                    <!-- Event Location Details -->
-                    <p style="margin: 10px 0 0 0; line-height: 1;"><b>Location coming soon</b><br /><b>Brooklyn, NY</b><br /><b>&nbsp;</b></p>
-                    <!-- Google Maps Embed for Location -->
-                    <div class="map-responsive">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96873.55926997268!2d-74.02739810328119!3d40.6453449693117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24416947c2109%3A0x82765c7404007886!2sBrooklyn%2C%20NY!5e0!3m2!1sen!2sus!4v1728773116090!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                    <!-- Dress Code Button -->
-                    <div class="d-flex justify-content-center align-items-center" style="height: 100%; padding: 20px;">
-                        <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal-welcome-dinner">
-                            <i class="fa fa-barcode"></i>&nbsp;&nbsp;Dress code
-                        </a>
-                    </div>
-                </div>
-            </div>
+      </div>
 
-            <!-- Second Event: Ceremony -->
-            <div class="col-md-6 col-sm-12 text-center" style="margin-bottom: 30px;">
-                <div class="event-wrap animate-box wp2" style="border: 2px solid #ccc; padding: 20px; border-radius: 10px;">
-                    <h3>Ceremony and Reception</h3>
-                    <!-- Event Date -->
-                    <div class="event-col">
-                        <i class="fa fa-calendar"></i>
-                        <span>February 15, 2025</span>
-                    </div>
-                    <!-- Event Time -->
-                    <div class="event-col">
-                        <i class="fa fa-clock-o"></i>
-                        <span>5:00 PM - 12:00 AM</span>
-                    </div>
-                    <div id="add-ceremony-reception"></div>
-                    <!-- Event Location Details -->
-                    <p style="margin: 10px 0 0 0; line-height: 1;"><b>Fandi Mata</b><br /><b>74 Bayard St.</b><br /><b>Brooklyn, NY 11222</b></p>
-                    <!-- Google Maps Embed for Location -->
-                    <div class="map-responsive">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.9620855249514!2d-73.95182802367833!3d40.718851137195756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259fe68162ca9%3A0xdadfc78daf8776b8!2sFandi%20Mata!5e0!3m2!1sen!2sus!4v1727648267234!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                    <!-- Dress Code Button -->
-                    <div class="d-flex justify-content-center align-items-center" style="height: 100%; padding: 20px;">
-                        <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal-ceremony-reception">
-                            <i class="fa fa-barcode"></i>&nbsp;&nbsp;Dress code
-                        </a>
-                    </div>
-                </div>
-            </div>
+      <!-- Down arrow for scrolling to invitation section -->
+      <div class="down-arrow floating-arrow">
+        <a href="#invitation"><i class="fa fa-angle-down"></i></a>
+      </div>
+    </section>
+  </body>
+
+  <section class="events section-padding" id="events">
+    <div class="container">
+      <div class="row">
+        <!-- Section Heading -->
+        <div
+          class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box"
+        >
+          <h2>Events</h2>
         </div>
+      </div>
+      <div class="row" style="margin-top: 50px">
+        <!-- First Event: Welcome Dinner -->
+        <div class="col-md-6 col-sm-12 text-center" style="margin-bottom: 30px">
+          <div
+            class="event-wrap animate-box wp1"
+            style="border: 2px solid #ccc; padding: 20px; border-radius: 10px"
+          >
+            <h3>Welcome Dinner</h3>
+            <!-- Event Date -->
+            <div class="event-col">
+              <i class="fa fa-calendar"></i>
+              <span>February 14, 2025</span>
+            </div>
+            <!-- Event Time -->
+            <div class="event-col">
+              <i class="fa fa-clock-o"></i>
+              <span>6:00 PM - 9:00 PM</span>
+            </div>
+            <div id="add-welcome-dinner"></div>
+            <!-- Event Location Details -->
+            <p style="margin: 10px 0 0 0; line-height: 1">
+              <b>Location coming soon</b>
+              <br />
+              <b>Brooklyn, NY</b>
+              <br />
+              <b>&nbsp;</b>
+            </p>
+            <!-- Google Maps Embed for Location -->
+            <div class="map-responsive">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96873.55926997268!2d-74.02739810328119!3d40.6453449693117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24416947c2109%3A0x82765c7404007886!2sBrooklyn%2C%20NY!5e0!3m2!1sen!2sus!4v1728773116090!5m2!1sen!2sus"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <!-- Dress Code Button -->
+            <div
+              class="d-flex justify-content-center align-items-center"
+              style="height: 100%; padding: 20px"
+            >
+              <a
+                class="btn btn-accent btn-small"
+                data-toggle="modal"
+                data-target="#dc-modal-welcome-dinner"
+              >
+                <i class="fa fa-barcode"></i>
+                &nbsp;&nbsp;Dress code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second Event: Ceremony -->
+        <div class="col-md-6 col-sm-12 text-center" style="margin-bottom: 30px">
+          <div
+            class="event-wrap animate-box wp2"
+            style="border: 2px solid #ccc; padding: 20px; border-radius: 10px"
+          >
+            <h3>Ceremony and Reception</h3>
+            <!-- Event Date -->
+            <div class="event-col">
+              <i class="fa fa-calendar"></i>
+              <span>February 15, 2025</span>
+            </div>
+            <!-- Event Time -->
+            <div class="event-col">
+              <i class="fa fa-clock-o"></i>
+              <span>5:00 PM - 12:00 AM</span>
+            </div>
+            <div id="add-ceremony-reception"></div>
+            <!-- Event Location Details -->
+            <p style="margin: 10px 0 0 0; line-height: 1">
+              <b>Fandi Mata</b>
+              <br />
+              <b>74 Bayard St.</b>
+              <br />
+              <b>Brooklyn, NY 11222</b>
+            </p>
+            <!-- Google Maps Embed for Location -->
+            <div class="map-responsive">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.9620855249514!2d-73.95182802367833!3d40.718851137195756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259fe68162ca9%3A0xdadfc78daf8776b8!2sFandi%20Mata!5e0!3m2!1sen!2sus!4v1727648267234!5m2!1sen!2sus"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <!-- Dress Code Button -->
+            <div
+              class="d-flex justify-content-center align-items-center"
+              style="height: 100%; padding: 20px"
+            >
+              <a
+                class="btn btn-accent btn-small"
+                data-toggle="modal"
+                data-target="#dc-modal-ceremony-reception"
+              >
+                <i class="fa fa-barcode"></i>
+                &nbsp;&nbsp;Dress code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- Add this CSS to make Google Maps embed responsive -->
-<style>
+  <!-- Add this CSS to make Google Maps embed responsive -->
+  <style>
     .map-responsive {
-        overflow: hidden;
-        padding-bottom: 56.25%;
-        position: relative;
-        height: 0;
+      overflow: hidden;
+      padding-bottom: 56.25%;
+      position: relative;
+      height: 0;
     }
     .map-responsive iframe {
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
     }
-</style>
+  </style>
 
-
-<!-- Dress Code Modal for Welcome Dinner -->
-<div id="dc-modal-welcome-dinner" class="modal fade" tabindex="-1" role="dialog">
+  <!-- Dress Code Modal for Welcome Dinner -->
+  <div
+    id="dc-modal-welcome-dinner"
+    class="modal fade"
+    tabindex="-1"
+    role="dialog"
+  >
     <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-body text-center">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span>&times;</span>
-                </button>
-                <h3 class="section-padding">Dress Code</h3>
-                <h5>Welcome Dinner <span class="time">6:00 PM</span></h5>
-                <p>
-                    <strong>Dressy Casual</strong>
-                </p>
-                <ul style="list-style-type: none; padding: 0; text-align: left; display: inline-block;">
-                    <li style="margin-bottom: 10px;">Choose slacks, chinos, a dress, or a skirt with a stylish top such as a button-down shirt, blouse, or polo.</li>
-                </ul>
-            </div>
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span>&times;</span>
+          </button>
+          <h3 class="section-padding">Dress Code</h3>
+          <h5>
+            Welcome Dinner
+            <span class="time">6:00 PM</span>
+          </h5>
+          <p>
+            <strong>Dressy Casual</strong>
+          </p>
+          <ul
+            style="
+              list-style-type: none;
+              padding: 0;
+              text-align: left;
+              display: inline-block;
+            "
+          >
+            <li style="margin-bottom: 10px">
+              Choose slacks, chinos, a dress, or a skirt with a stylish top such
+              as a button-down shirt, blouse, or polo.
+            </li>
+          </ul>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 
-<!-- Dress Code Modal for Ceremony -->
-<div id="dc-modal-ceremony-reception" class="modal fade" tabindex="-1" role="dialog">
+  <!-- Dress Code Modal for Ceremony -->
+  <div
+    id="dc-modal-ceremony-reception"
+    class="modal fade"
+    tabindex="-1"
+    role="dialog"
+  >
     <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-body text-center">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span>&times;</span>
-                </button>
-                <h3 class="section-padding">Dress Code</h3>
-                <h5>Ceremony <span class="time">5:00 PM - 6:30 PM</span></h5>
-                <h5>Cocktail Hour <span class="time">6:30 PM - 7:30 PM</span></h5>
-                <h5>Reception <span class="time">7:30 PM - 12:00 AM</span></h5>
-                <p>
-                    <strong>Black Tie Optional or Formal Indian Attire</strong>
-                </p>
-                <ul style="list-style-type: none; padding: 0; text-align: left; display: inline-block;">
-                    <li style="margin-bottom: 10px;">For formal wear, you can choose a tuxedo, suit, gown, or dress.</li>
-                    <li style="margin-bottom: 10px;">Traditional Indian attire, such as sarees, lehengas, sherwanis, or kurtas, are also welcome!</li>
-                </ul>
-            </div>
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span>&times;</span>
+          </button>
+          <h3 class="section-padding">Dress Code</h3>
+          <h5>
+            Ceremony
+            <span class="time">5:00 PM - 6:30 PM</span>
+          </h5>
+          <h5>
+            Cocktail Hour
+            <span class="time">6:30 PM - 7:30 PM</span>
+          </h5>
+          <h5>
+            Reception
+            <span class="time">7:30 PM - 12:00 AM</span>
+          </h5>
+          <p>
+            <strong>Black Tie Optional or Formal Indian Attire</strong>
+          </p>
+          <ul
+            style="
+              list-style-type: none;
+              padding: 0;
+              text-align: left;
+              display: inline-block;
+            "
+          >
+            <li style="margin-bottom: 10px">
+              For formal wear, you can choose a tuxedo, suit, gown, or dress.
+            </li>
+            <li style="margin-bottom: 10px">
+              Traditional Indian attire, such as sarees, lehengas, sherwanis, or
+              kurtas, are also welcome!
+            </li>
+          </ul>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 
-<section id="video-bg" class="hidden-sm hidden-xs">
-    <div id="bgndVideo" class="player"
-         data-property="{videoURL:'https://www.youtube.com/watch?v=7S7smPw9EiE',containment:'#video-bg',autoPlay:true, mute:true, showControls:false, startAt:20, stopAt:120, opacity:1}">
-    </div>
+  <section id="video-bg" class="hidden-sm hidden-xs">
+    <div
+      id="bgndVideo"
+      class="player"
+      data-property="{videoURL:'https://www.youtube.com/watch?v=7S7smPw9EiE',containment:'#video-bg',autoPlay:true, mute:true, showControls:false, startAt:20, stopAt:120, opacity:1}"
+    ></div>
     <div id="video-content">
-        <h5>New York City</h5>
-        <p>The city that never sleeps</p>
+      <h5>New York City</h5>
+      <p>The city that never sleeps</p>
     </div>
-</section>
+  </section>
 
-<section class="section-padding" id="intro">
+  <section class="section-padding" id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-                <h2>How we met</h2>
-            </div>
+      <div class="row">
+        <div
+          class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box"
+        >
+          <h2>How we met</h2>
         </div>
-        <div class="row">
-            <div class="col-md-12 image-text-wrapper">
-                <div class="row no-gutter">
-                    <div class="col-sm-4 col-sm-push-2 col-xs-6 no-padding">
-                        <img src="img/ravi.jpg" class="wp8 hero-content"/>
-                    </div>
-                    <div class="col-sm-4 col-sm-push-2 col-xs-6 no-padding">
-                        <img src="img/sam.jpg" class="wp9 hero-content"/>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <p>
-                        Ravi and Sam's story began during Ravi's first week of work for the government, where Sam was assigned as Ravi's onboarding buddy. Just a few weeks later, COVID-19 changed everything, and the world went into lockdown. With both of them working on the same team and project, they found themselves navigating these unusual times together, often being each other's only in-person company. The close connection they formed during those months soon blossomed into something more, and at the end of the year, they began dating.
-                    </p>
-                    <p>
-                        Once they started dating, they found themselves constantly traveling back and forth between Maryland, where Ravi lived, and DC, where Sam lived, making the most of their weekends together. Eventually, Sam received an exciting opportunity to move to California for work, and without hesitation, Ravi followed. From their initial days as colleagues to becoming each other's partners in adventure, their journey is filled with love, growth, and a sense of togetherness that has only deepened over time. And the rest, as they say, is history.
-                    </p>
-                </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 image-text-wrapper">
+          <div class="row no-gutter">
+            <div class="col-sm-4 col-sm-push-2 col-xs-6 no-padding">
+              <img src="img/ravi.jpg" class="wp8 hero-content" />
             </div>
+            <div class="col-sm-4 col-sm-push-2 col-xs-6 no-padding">
+              <img src="img/sam.jpg" class="wp9 hero-content" />
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p>
+              Ravi and Sam's story began during Ravi's first week of work for
+              the government, where Sam was assigned as Ravi's onboarding buddy.
+              Just a few weeks later, COVID-19 changed everything, and the world
+              went into lockdown. With both of them working on the same team and
+              project, they found themselves navigating these unusual times
+              together, often being each other's only in-person company. The
+              close connection they formed during those months soon blossomed
+              into something more, and at the end of the year, they began
+              dating.
+            </p>
+            <p>
+              Once they started dating, they found themselves constantly
+              traveling back and forth between Maryland, where Ravi lived, and
+              DC, where Sam lived, making the most of their weekends together.
+              Eventually, Sam received an exciting opportunity to move to
+              California for work, and without hesitation, Ravi followed. From
+              their initial days as colleagues to becoming each other's partners
+              in adventure, their journey is filled with love, growth, and a
+              sense of togetherness that has only deepened over time. And the
+              rest, as they say, is history.
+            </p>
+          </div>
         </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<section id="eng-pics" class="events section-padding">
+  <section id="eng-pics" class="events section-padding">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h2 class="header">Engagement Gallery</h2>
-            </div>
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/eng_pic_2-lg.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/eng_pic_2-lg.jpg" alt=""/>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/eng_pic_1-lg.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/eng_pic_1-lg.jpg" alt=""/>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/eng_pic_6-lg.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/eng_pic_6-lg.jpg" alt=""/>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/eng_pic_4-lg.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/eng_pic_4-lg.jpg" alt=""/>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/eng_pic_5-lg.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/eng_pic_5-lg.jpg" alt=""/>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/eng_pic_3-lg.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/eng_pic_3-lg.jpg" alt=""/>
-                    </div>
-                </a>
-            </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h2 class="header">Engagement Gallery</h2>
         </div>
+        <div class="col-md-2">
+          <a class="fancybox" rel="group" href="img/eng_pics/eng_pic_2-lg.jpg">
+            <div class="img-wrap">
+              <div class="overlay">
+                <i class="fa fa-search"></i>
+              </div>
+              <img src="img/eng_pics/eng_pic_2-lg.jpg" alt="" />
+            </div>
+          </a>
+        </div>
+        <div class="col-md-2">
+          <a class="fancybox" rel="group" href="img/eng_pics/eng_pic_1-lg.jpg">
+            <div class="img-wrap">
+              <div class="overlay">
+                <i class="fa fa-search"></i>
+              </div>
+              <img src="img/eng_pics/eng_pic_1-lg.jpg" alt="" />
+            </div>
+          </a>
+        </div>
+        <div class="col-md-2">
+          <a class="fancybox" rel="group" href="img/eng_pics/eng_pic_6-lg.jpg">
+            <div class="img-wrap">
+              <div class="overlay">
+                <i class="fa fa-search"></i>
+              </div>
+              <img src="img/eng_pics/eng_pic_6-lg.jpg" alt="" />
+            </div>
+          </a>
+        </div>
+        <div class="col-md-2">
+          <a class="fancybox" rel="group" href="img/eng_pics/eng_pic_4-lg.jpg">
+            <div class="img-wrap">
+              <div class="overlay">
+                <i class="fa fa-search"></i>
+              </div>
+              <img src="img/eng_pics/eng_pic_4-lg.jpg" alt="" />
+            </div>
+          </a>
+        </div>
+        <div class="col-md-2">
+          <a class="fancybox" rel="group" href="img/eng_pics/eng_pic_5-lg.jpg">
+            <div class="img-wrap">
+              <div class="overlay">
+                <i class="fa fa-search"></i>
+              </div>
+              <img src="img/eng_pics/eng_pic_5-lg.jpg" alt="" />
+            </div>
+          </a>
+        </div>
+        <div class="col-md-2">
+          <a class="fancybox" rel="group" href="img/eng_pics/eng_pic_3-lg.jpg">
+            <div class="img-wrap">
+              <div class="overlay">
+                <i class="fa fa-search"></i>
+              </div>
+              <img src="img/eng_pics/eng_pic_3-lg.jpg" alt="" />
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="container">
-        <div class="row hidden-lg hidden-md hidden-xs">
-            <div class="col-xs-12 section-border section-padding"></div>
-        </div>
+      <div class="row hidden-lg hidden-md hidden-xs">
+        <div class="col-xs-12 section-border section-padding"></div>
+      </div>
     </div>
     <!--<div class="row">
         <div class="col-md-12">
@@ -432,280 +620,433 @@
             </div>
         </div>
     </div>-->
-</section>
+  </section>
 
-<section id="travel-lodging" class="section-padding text-center">
+  <section id="travel-lodging" class="section-padding text-center">
     <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-                <h2>Travel & Lodging</h2>
-                <p>Below you’ll find information on how to get from the three major New York City airports to Williamsburg, Brooklyn, as well as recommended accommodations for our wedding.</p>
-            </div>
+      <div class="row">
+        <div
+          class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box"
+        >
+          <h2>Travel & Lodging</h2>
+          <p>
+            Below you’ll find information on how to get from the three major New
+            York City airports to Williamsburg, Brooklyn, as well as recommended
+            accommodations for our wedding.
+          </p>
         </div>
-        <div class="row">
-            <!-- Airport Travel Information -->
-            <div class="col-md-4 col-sm-6 text-center">
-                <div class="travel-wrap">
-                    <i class="fa fa-plane fa-3x"></i>
-                    <h3>Newark Liberty Airport (EWR)</h3>
-                    <p>Traveling from Newark Liberty International Airport to Williamsburg, Brooklyn can be done via public transit or rideshare services.</p>
-                    <p><strong>Public Transit:</strong> Approximately 1.5 to 2 hours, costing around $20. Take the AirTrain Newark to NJ Transit, then transfer to the NYC Subway to reach Williamsburg.</p>
-                    <p><strong>Rideshare:</strong> Around 1 hour depending on traffic, costing between $60 to $100. Services like Uber or Lyft provide direct transportation to Williamsburg.</p>
-                </div>                         
-            </div>
-            <div class="col-md-4 col-sm-6 text-center">
-                <div class="travel-wrap">
-                    <i class="fa fa-plane fa-3x"></i>
-                    <h3>LaGuardia International Airport (LGA)</h3>
-                    <p>Traveling from LaGuardia Airport to Williamsburg, Brooklyn can be done via public transit or rideshare services.</p>
-                    <p><strong>Public Transit:</strong> Approximately 1 to 1.5 hours, costing $2.75. Take the Q70-SBS bus to Jackson Heights-Roosevelt Ave station, then transfer to the subway to reach Williamsburg.</p>
-                    <p><strong>Rideshare:</strong> Around 30 minutes depending on traffic, costing between $30 to $50. Services like Uber or Lyft provide direct transportation to Williamsburg.</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 text-center">
-                <div class="travel-wrap">
-                    <i class="fa fa-plane fa-3x"></i>
-                    <h3>John F. Kennedy Airport (JFK)</h3>
-                    <p>Traveling from John F. Kennedy International Airport to Williamsburg, Brooklyn can be done via public transit or rideshare services.</p>
-                    <p><strong>Public Transit:</strong> Approximately 1 to 1.5 hours, costing around $11. Take the AirTrain JFK to Jamaica Station, then transfer to the subway (J train) to reach Williamsburg.</p>
-                    <p><strong>Rideshare:</strong> Around 30 minutes to 1 hour depending on traffic, costing between $35 to $60. Services like Uber or Lyft provide direct transportation to Williamsburg.</p>
-                </div>
-            </div>
+      </div>
+      <div class="row">
+        <!-- Airport Travel Information -->
+        <div class="col-md-4 col-sm-6 text-center">
+          <div class="travel-wrap">
+            <i class="fa fa-plane fa-3x"></i>
+            <h3>Newark Liberty Airport (EWR)</h3>
+            <p>
+              Traveling from Newark Liberty International Airport to
+              Williamsburg, Brooklyn can be done via public transit or rideshare
+              services.
+            </p>
+            <p>
+              <strong>Public Transit:</strong>
+              Approximately 1.5 to 2 hours, costing around $20. Take the
+              AirTrain Newark to NJ Transit, then transfer to the NYC Subway to
+              reach Williamsburg.
+            </p>
+            <p>
+              <strong>Rideshare:</strong>
+              Around 1 hour depending on traffic, costing between $60 to $100.
+              Services like Uber or Lyft provide direct transportation to
+              Williamsburg.
+            </p>
+          </div>
         </div>
-        <div class="row">
-            <!-- Hotel Information -->
-            <div class="col-md-4 col-sm-6 text-center">
-                <div class="hotel-wrap">
-                    <i class="fa fa-bed fa-3x"></i>
-                    <h3>Coda Williamsburg</h3>
-                    <p>We have reserved a block of rooms at the Coda Williamsburg. Please use the wedding code when booking to receive a discount.</p>
-                    <p><strong>Address:</strong> 160 N 12th St, Brooklyn, NY 11249</p>
-                    <p><strong>Phone:</strong> (718) 218-7500</p>
-                    <p><strong>Website:</strong> <a href="https://www.codahotels.com" target="_blank">www.codawilliamsburg.com</a></p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 text-center">
-                <div class="hotel-wrap">
-                    <i class="fa fa-hotel fa-3x"></i>
-                    <h3>The William Vale</h3>
-                    <p>The William Vale offers modern luxury and is just a short distance from our wedding venue. We highly recommend this hotel for a wonderful experience.</p>
-                    <p><strong>Address:</strong> 111 N 12th St, Brooklyn, NY 11249</p>
-                    <p><strong>Phone:</strong> (718) 631-8400</p>
-                    <p><strong>Website:</strong> <a href="https://www.thewilliamvale.com" target="_blank">www.thewilliamvale.com</a></p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 text-center">
-                <div class="hotel-wrap">
-                    <i class="fa fa-bed fa-3x"></i>
-                    <h3>The Penny Williamsburg</h3>
-                    <p>The Penny Williamsburg is another excellent choice, offering comfortable and stylish accommodations in the heart of Williamsburg.</p>
-                    <p><strong>Address:</strong> 288 N 8th St, Brooklyn, NY 11211</p>
-                    <p><strong>Phone:</strong> (929) 594-2020</p>
-                    <p><strong>Website:</strong> <a href="https://www.penny-hotel.com" target="_blank">www.thepennyhotel.com</a></p>
-                </div>
-            </div>
+        <div class="col-md-4 col-sm-6 text-center">
+          <div class="travel-wrap">
+            <i class="fa fa-plane fa-3x"></i>
+            <h3>LaGuardia International Airport (LGA)</h3>
+            <p>
+              Traveling from LaGuardia Airport to Williamsburg, Brooklyn can be
+              done via public transit or rideshare services.
+            </p>
+            <p>
+              <strong>Public Transit:</strong>
+              Approximately 1 to 1.5 hours, costing $2.75. Take the Q70-SBS bus
+              to Jackson Heights-Roosevelt Ave station, then transfer to the
+              subway to reach Williamsburg.
+            </p>
+            <p>
+              <strong>Rideshare:</strong>
+              Around 30 minutes depending on traffic, costing between $30 to
+              $50. Services like Uber or Lyft provide direct transportation to
+              Williamsburg.
+            </p>
+          </div>
         </div>
+        <div class="col-md-4 col-sm-6 text-center">
+          <div class="travel-wrap">
+            <i class="fa fa-plane fa-3x"></i>
+            <h3>John F. Kennedy Airport (JFK)</h3>
+            <p>
+              Traveling from John F. Kennedy International Airport to
+              Williamsburg, Brooklyn can be done via public transit or rideshare
+              services.
+            </p>
+            <p>
+              <strong>Public Transit:</strong>
+              Approximately 1 to 1.5 hours, costing around $11. Take the
+              AirTrain JFK to Jamaica Station, then transfer to the subway (J
+              train) to reach Williamsburg.
+            </p>
+            <p>
+              <strong>Rideshare:</strong>
+              Around 30 minutes to 1 hour depending on traffic, costing between
+              $35 to $60. Services like Uber or Lyft provide direct
+              transportation to Williamsburg.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Hotel Information -->
+        <div class="col-md-4 col-sm-6 text-center">
+          <div class="hotel-wrap">
+            <i class="fa fa-bed fa-3x"></i>
+            <h3>Coda Williamsburg</h3>
+            <p>
+              We have reserved a block of rooms at the Coda Williamsburg. Please
+              use the wedding code when booking to receive a discount.
+            </p>
+            <p>
+              <strong>Address:</strong>
+              160 N 12th St, Brooklyn, NY 11249
+            </p>
+            <p>
+              <strong>Phone:</strong>
+              (718) 218-7500
+            </p>
+            <p>
+              <strong>Website:</strong>
+              <a href="https://www.codahotels.com" target="_blank">
+                www.codawilliamsburg.com
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 text-center">
+          <div class="hotel-wrap">
+            <i class="fa fa-hotel fa-3x"></i>
+            <h3>The William Vale</h3>
+            <p>
+              The William Vale offers modern luxury and is just a short distance
+              from our wedding venue. We highly recommend this hotel for a
+              wonderful experience.
+            </p>
+            <p>
+              <strong>Address:</strong>
+              111 N 12th St, Brooklyn, NY 11249
+            </p>
+            <p>
+              <strong>Phone:</strong>
+              (718) 631-8400
+            </p>
+            <p>
+              <strong>Website:</strong>
+              <a href="https://www.thewilliamvale.com" target="_blank">
+                www.thewilliamvale.com
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 text-center">
+          <div class="hotel-wrap">
+            <i class="fa fa-bed fa-3x"></i>
+            <h3>The Penny Williamsburg</h3>
+            <p>
+              The Penny Williamsburg is another excellent choice, offering
+              comfortable and stylish accommodations in the heart of
+              Williamsburg.
+            </p>
+            <p>
+              <strong>Address:</strong>
+              288 N 8th St, Brooklyn, NY 11211
+            </p>
+            <p>
+              <strong>Phone:</strong>
+              (929) 594-2020
+            </p>
+            <p>
+              <strong>Website:</strong>
+              <a href="https://www.penny-hotel.com" target="_blank">
+                www.thepennyhotel.com
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-
-<section id="registry" class="events section-padding text-center">
+  <section id="registry" class="events section-padding text-center">
     <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-                <h2>Registry</h2>
-                <p>Your love, laughter, and company on our big day is the greatest gift of all. However, if you wish to honor us with a gift, we have registered at the following place:</p>
-            </div>
+      <div class="row">
+        <div
+          class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box"
+        >
+          <h2>Registry</h2>
+          <p>
+            Your love, laughter, and company on our big day is the greatest gift
+            of all. However, if you wish to honor us with a gift, we have
+            registered at the following place:
+          </p>
         </div>
-        <div class="row">
-            <!-- Registry Link -->
-            <div class="col-md-12 text-center">
-                <a href="https://withjoy.com/ravi-and-samantha/registry" target="_blank">
-                    <div class="registry-wrap">
-                        <i class="fa fa-heart fa-3x"></i>
-                        <h3>Our Registry</h3>
-                    </div>
-                </a>
+      </div>
+      <div class="row">
+        <!-- Registry Link -->
+        <div class="col-md-12 text-center">
+          <a
+            href="https://withjoy.com/ravi-and-samantha/registry"
+            target="_blank"
+          >
+            <div class="registry-wrap">
+              <i class="fa fa-heart fa-3x"></i>
+              <h3>Our Registry</h3>
             </div>
+          </a>
         </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<section class="rsvp text-center" id="rsvp">
+  <section class="rsvp text-center" id="rsvp">
     <!-- RSVP Modal (Popup) -->
     <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <!-- Modal Body -->
-                <div class="modal-body">
-                    <!-- Close Button for Modal -->
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span></button>
-                    <div class="section-padding">
-                        <!-- Thank You Message for Successful RSVP -->
-                        <h3>Thank you!</h3>
-                        <p>We look forward to seeing you on our big day!</p>
-                    </div>
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <!-- Modal Body -->
+          <div class="modal-body">
+            <!-- Close Button for Modal -->
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span>&times;</span>
+            </button>
+            <div class="section-padding">
+              <!-- Thank You Message for Successful RSVP -->
+              <h3>Thank you!</h3>
+              <p>We look forward to seeing you on our big day!</p>
+            </div>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <div class="container">
+      <div class="row">
+        <!-- RSVP Form Container -->
+        <div class="col-md-6 col-md-offset-3">
+          <h2>RSVP</h2>
+          <!-- RSVP Instructions -->
+          <p>
+            We would greatly appreciate if you could RSVP before December 15th,
+            2024
+          </p>
+          <form id="rsvp-form" class="rsvp-form" action="" method="POST">
+            <div class="row">
+              <!-- Name Input Field -->
+              <div class="col-md-6 col-sm-6">
+                <div class="form-input-group">
+                  <i class="fa fa-user"></i>
+                  <input
+                    name="name"
+                    class=""
+                    placeholder="Your name"
+                    required
+                  />
                 </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-    <div class="container">
-        <div class="row">
-            <!-- RSVP Form Container -->
-            <div class="col-md-6 col-md-offset-3">
-                <h2>RSVP</h2>
-                <!-- RSVP Instructions -->
-                <p>We would greatly appreciate if you could RSVP before December 15th, 2024</p>
-                <form id="rsvp-form" class="rsvp-form" action="" method="POST">
-                    <div class="row">
-                        <!-- Name Input Field -->
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-user"></i>
-                                <input name="name" class="" placeholder="Your name" required/>
-                            </div>
-                        </div>
-                        <!-- Email Input Field -->
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-envelope"></i>
-                                <input type="email" name="email" class="" placeholder="Your email" required/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <!-- Attending Welcome Dinner Text Field with Restriction -->
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-glass"></i>
-                                <input type="text" name="welcome_dinner" id="welcome_dinner" class="" list="yes_no_options" placeholder="Welcome Dinner" required/>
-                                <datalist id="yes_no_options">
-                                    <option value="Yes"></option>
-                                    <option value="No"></option>
-                                </datalist>
-                            </div>
-                        </div>
-                        <!-- Attending Ceremony/Reception Text Field with Restriction -->
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-birthday-cake"></i>
-                                <input type="text" name="ceremony_reception" id="ceremony_reception" class="" list="yes_no_options" placeholder="Ceremony/Reception" required/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <!-- Alert Wrapper for Form Validation or Submission Messages -->
-                        <div class="col-md-12" id="alert-wrapper"></div>
-                    </div>
-                    <!-- Submit Button for RSVP Form -->
-                    <button class="btn-fill rsvp-btn">Submit</button>
-                </form>
+              </div>
+              <!-- Email Input Field -->
+              <div class="col-md-6 col-sm-6">
+                <div class="form-input-group">
+                  <i class="fa fa-envelope"></i>
+                  <input
+                    type="email"
+                    name="email"
+                    class=""
+                    placeholder="Your email"
+                    required
+                  />
+                </div>
+              </div>
             </div>
-        </div>
-    </div>
-</section>
-
-<footer>
-    <div class="container">
-        <div class="row">
-            <!-- Footer content centered on the page -->
-            <div class="col-sm-12 text-center content">
-                <!-- "Back to Top" button, with an icon -->
-                <span class="to-top-wrapper">
-                    <a href="#top" class="to-top">
-                        <i class="fa fa-angle-up"></i>
-                    </a>
-                </span>
-                <!-- Footer message with animated heart icon -->
-                <p>Made by Ravi with <span class="fa fa-heart pulse2" id="heart-icon"></span> for Sam</p>
+            <div class="row">
+              <!-- Attending Welcome Dinner Text Field with Restriction -->
+              <div class="col-md-6 col-sm-6">
+                <div class="form-input-group">
+                  <i class="fa fa-glass"></i>
+                  <input
+                    type="text"
+                    name="welcome_dinner"
+                    id="welcome_dinner"
+                    class=""
+                    list="yes_no_options"
+                    placeholder="Welcome Dinner"
+                    required
+                  />
+                  <datalist id="yes_no_options">
+                    <option value="Yes"></option>
+                    <option value="No"></option>
+                  </datalist>
+                </div>
+              </div>
+              <!-- Attending Ceremony/Reception Text Field with Restriction -->
+              <div class="col-md-6 col-sm-6">
+                <div class="form-input-group">
+                  <i class="fa fa-birthday-cake"></i>
+                  <input
+                    type="text"
+                    name="ceremony_reception"
+                    id="ceremony_reception"
+                    class=""
+                    list="yes_no_options"
+                    placeholder="Ceremony/Reception"
+                    required
+                  />
+                </div>
+              </div>
             </div>
+            <div class="row">
+              <!-- Alert Wrapper for Form Validation or Submission Messages -->
+              <div class="col-md-12" id="alert-wrapper"></div>
+            </div>
+            <!-- Submit Button for RSVP Form -->
+            <button class="btn-fill rsvp-btn">Submit</button>
+          </form>
         </div>
+      </div>
     </div>
-</footer>
+  </section>
 
-<!-- Popup Modal for Melo -->
-<div id="melo-popup" class="melo-popup">
+  <footer>
+    <div class="container">
+      <div class="row">
+        <!-- Footer content centered on the page -->
+        <div class="col-sm-12 text-center content">
+          <!-- "Back to Top" button, with an icon -->
+          <span class="to-top-wrapper">
+            <a href="#top" class="to-top">
+              <i class="fa fa-angle-up"></i>
+            </a>
+          </span>
+          <!-- Footer message with animated heart icon -->
+          <p>
+            Made by Ravi with
+            <span class="fa fa-heart pulse2" id="heart-icon"></span>
+            for Sam
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Popup Modal for Melo -->
+  <div id="melo-popup" class="melo-popup">
     <div class="melo-popup-content">
-        <span class="close">&times;</span>
-        <img src="img/melo.jpg" alt="Melo" />
-        <p>Melo says hi!</p>
+      <span class="close">&times;</span>
+      <img src="img/melo.jpg" alt="Melo" />
+      <p>Melo says hi!</p>
     </div>
-</div>
+  </div>
 
+  <!-- Load jQuery from local vendor directory, with fallback function if loading fails -->
+  <script
+    src="js/jquery-1.11.2.min.js"
+    onerror="loadJsFromCDN('jquery.js')"
+  ></script>
 
+  <!-- Load Waypoints plugin for scrolling animations, with fallback function if loading fails -->
+  <script
+    src="node_modules/waypoints/lib/jquery.waypoints.min.js"
+    onerror="loadJsFromCDN('waypoints.js')"
+  ></script>
 
-<!-- Load jQuery from local vendor directory, with fallback function if loading fails -->
-<script src="js/jquery-1.11.2.min.js" onerror="loadJsFromCDN('jquery.js')"></script>
+  <!-- Load Fancybox plugin for creating lightbox effects -->
+  <script src="js/jquery.fancybox.pack.min.js"></script>
 
-<!-- Load Waypoints plugin for scrolling animations, with fallback function if loading fails -->
-<script src="node_modules/waypoints/lib/jquery.waypoints.min.js" onerror="loadJsFromCDN('waypoints.js')"></script>
+  <!-- Load Bootstrap JavaScript for UI components and interactions -->
+  <script src="js/bootstrap.min.js"></script>
 
-<!-- Load Fancybox plugin for creating lightbox effects -->
-<script src="js/jquery.fancybox.pack.min.js"></script>
+  <!-- Load FlexSlider plugin for creating responsive sliders -->
+  <script src="js/jquery.flexslider.min.js"></script>
 
-<!-- Load Bootstrap JavaScript for UI components and interactions -->
-<script src="js/bootstrap.min.js"></script>
+  <!-- Load YTPlayer plugin for embedding YouTube videos as background players -->
+  <script src="js/jquery.mb.YTPlayer.min.js"></script>
 
-<!-- Load FlexSlider plugin for creating responsive sliders -->
-<script src="js/jquery.flexslider.min.js"></script>
+  <!-- Load Ouical for adding calendar event functionality -->
+  <script src="js/ouical.min.js"></script>
 
-<!-- Load YTPlayer plugin for embedding YouTube videos as background players -->
-<script src="js/jquery.mb.YTPlayer.min.js"></script>
+  <!-- Load main scripts for website functionality -->
+  <script src="js/scripts.min.js"></script>
 
-<!-- Load Ouical for adding calendar event functionality -->
-<script src="js/ouical.min.js"></script>
+  <!-- Load clock functionality script -->
+  <script src="js/clock.min.js"></script>
 
-<!-- Load main scripts for website functionality -->
-<script src="js/scripts.min.js"></script>
+  <!-- Load CountTo plugin for animated counting numbers -->
+  <script src="js/jquery.countTo.js"></script>
 
-<!-- Load clock functionality script -->
-<script src="js/clock.min.js"></script>
+  <!-- Load Moment.js for date and time manipulation -->
+  <script src="https://momentjs.com/downloads/moment.js"></script>
 
-<!-- Load CountTo plugin for animated counting numbers -->
-<script src="js/jquery.countTo.js"></script>
+  <!-- Load Moment Timezone for handling time zones with Moment.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.14/moment-timezone-with-data-2012-2022.min.js"></script>
 
-<!-- Load Moment.js for date and time manipulation -->
-<script src="https://momentjs.com/downloads/moment.js"></script>
+  <!-- Load FlipClock plugin for countdown and clock animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.js"></script>
 
-<!-- Load Moment Timezone for handling time zones with Moment.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.14/moment-timezone-with-data-2012-2022.min.js"></script>
-
-<!-- Load FlipClock plugin for countdown and clock animations -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.js"></script>
-
-
-
-<!-- Google Analytics -->
-<script>
+  <!-- Google Analytics -->
+  <script>
     // Self-invoking function to initialize Google Analytics
     (function (i, s, o, g, r, a, m) {
-        // Create a reference to Google Analytics in the global scope
-        i['GoogleAnalyticsObject'] = r;
+      // Create a reference to Google Analytics in the global scope
+      i['GoogleAnalyticsObject'] = r;
 
-        // Define the Google Analytics function if not already defined
-        i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date(); // Set the function creation timestamp
+      // Define the Google Analytics function if not already defined
+      (i[r] =
+        i[r] ||
+        function () {
+          (i[r].q = i[r].q || []).push(arguments);
+        }),
+        (i[r].l = 1 * new Date()); // Set the function creation timestamp
 
-        // Create the script element for Google Analytics
-        a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
-        
-        // Set script to load asynchronously
-        a.async = 1;
+      // Create the script element for Google Analytics
+      (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
 
-        // Set the script source to the Google Analytics URL
-        a.src = g;
+      // Set script to load asynchronously
+      a.async = 1;
 
-        // Insert the script element before the first script element in the document
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+      // Set the script source to the Google Analytics URL
+      a.src = g;
+
+      // Insert the script element before the first script element in the document
+      m.parentNode.insertBefore(a, m);
+    })(
+      window,
+      document,
+      'script',
+      'https://www.google-analytics.com/analytics.js',
+      'ga'
+    );
 
     // Create a new Google Analytics tracker with the given tracking ID
     ga('create', 'UA-46465113-4', 'auto');
 
     // Send a pageview event to Google Analytics
     ga('send', 'pageview');
-</script>
+  </script>
 </html>

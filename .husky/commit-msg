@@ -1,1 +1,2 @@
 npm run lint:html
+npm run format
