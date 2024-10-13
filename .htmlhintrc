@@ -1,0 +1,7 @@
+{
+  "attr-value-double-quotes": true,
+  "doctype-first": true,
+  "tag-pair": true,
+  "tag-self-close": true,
+  "id-unique": true
+}
