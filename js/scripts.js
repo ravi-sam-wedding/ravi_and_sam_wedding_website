@@ -162,7 +162,7 @@ $(document).ready(function () {
             title: "Ravi and Sam's Welcome Dinner",
             start: new Date('Feb 14, 2025 18:00'),
             end: new Date('Feb 14, 2025 21:00'),
-            address: 'I don’t remember',
+            address: 'Location coming soon',
             description: "Join us for a wonderful evening to kick off the celebrations!"
         }
     });
@@ -178,8 +178,8 @@ $(document).ready(function () {
         data: {
             title: "Ravi and Sam's Wedding Ceremony and Reception",
             start: new Date('Feb 15, 2025 17:00'),
-            end: new Date('Feb 15, 2025 23:00'),
-            address: 'I don’t remember',
+            end: new Date('Feb 16, 2025 00:00'),
+            address: 'Fandi Mata, 74 Bayard St., Brooklyn, NY 11222',
             description: "We can't wait to see you on our big day."
         }
     });

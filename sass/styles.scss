@@ -168,7 +168,7 @@ Waypoinsts
 .wp8, .wp9 {
   -webkit-animation-delay: 0.3s;
   animation-delay: 0.3s;
-  opacity: 0.05 !important;/* Adjust the transparency (0 is fully transparent, 1 is fully opaque) */
+  opacity: 0.95 !important;/* Adjust the transparency (0 is fully transparent, 1 is fully opaque) */
 }
 .bounceInLeft, .bounceInRight, .fadeInUp, .fadeInUpDelay, .fadeInDown, .fadeInUpD, .fadeInLeft, .fadeInRight, .bounceInDown {
   visibility: visible;
@@ -388,19 +388,6 @@ Social share buttons
   width: 100%;
   height: auto;
   display: block;
-}
-
-.text-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px;
-  color: white; /* Ensure the text is visible over the images */
-  z-index: 2;
-  background: transparent; /* Remove the background color */
-  overflow-y: auto; /* Allow scrolling if the text is too long */
-  max-height: 100%; /* Ensure it doesn’t exceed the parent height */
 }
 
 /* ==========================================================================
