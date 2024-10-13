@@ -5,8 +5,8 @@
   "main": "npmfile.js",
   "scripts": {
     "test": "npm-run-all --parallel jest_test cypress_test",
-    "jest_test": "jest unitTests",
-    "cypress_test": "cypress run --spec 'tests/integrationTests/**/*.test.js'",
+    "jest_test": "jest",
+    "cypress_test": "cypress run",
     "prepare": "husky",
     "lint:html": "htmlhint .",
     "format": "prettier --write '**/*.{html,js,css,scss}'"
