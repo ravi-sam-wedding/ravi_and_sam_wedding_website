@@ -849,7 +849,7 @@ $(document).ready(function () {
             }
     
             // Proceed to submit the form data
-            $.post('https://script.google.com/macros/s/AKfycbyi_NC30yY21CXWj0vbddY3ZezlwwOFCszRjfj1LpdJ7MV-EmUfn-5kzBpPNxjA8PZ7WQ/exec', formData)
+            $.post('https://script.google.com/macros/s/AKfycbxTz4SsYEpZef68mwSFTEFugtmiDcV7HFbGQC2ANaj5ga_NTasdkZzaXG_XkXZ-HugWkw/exec', formData)
                 .done(function (data) {
                     console.log(data);
                     if (data.result === "error") {
