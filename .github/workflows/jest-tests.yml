@@ -1,4 +1,4 @@
-name: testing-pipeline
+name: jest-tests
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  test:
+  jest-test:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,8 +24,5 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Run RSVP Validation Test
-      run: npm run test -- unitTests/rsvpValidation.test.js
-
-    - name: Run RSVP Submission Test
-      run: npm run test -- unitTests/rsvpSubmission.test.js
+    - name: Run Jest Unit Tests
+      run: npm run jest_test
