@@ -12,7 +12,7 @@ var fs = require('fs'); // Node.js File System module for reading files
 // Task to generate guestList JSON and embed it into scripts.js
 gulp.task('generate-guestlist', function () {
     // Read guestList
-    const guestListJson = fs.readFileSync('guestList.json', 'utf8');
+    const guestListJson = fs.readFileSync('guest-list/guestList.json', 'utf8');
 
     // Process for rsvpValidation.test.js (or any other test file)
     gulp.src('tests/rsvpValidation.test.js', { allowEmpty: true })

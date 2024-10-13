@@ -7,7 +7,7 @@
    npm install
 2. **Update guest list**
    ```sh
-   node guestListHash.js
+   node guest-list/guestListHash.js
 3. **Compile sass to css, minify js, etc.**
    ```sh
    gulp
