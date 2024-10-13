@@ -1,4 +1,4 @@
-name: Run All RSVP Tests
+name: Testing pipeline
 
 on:
   push:

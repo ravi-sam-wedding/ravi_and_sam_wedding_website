@@ -17,17 +17,13 @@ gulp.task('generate-guestlist', function () {
 
     // Process for rsvpValidation.test.js (or any other test file)
     gulp.src('tests/rsvpValidation.test.js', { allowEmpty: true })
-    // Remove any previous guest list definition by wiping out the placeholder line in the test file
-    .pipe(replace(/const guestList = .*;/, '/* GUESTLIST_PLACEHOLDER */'))
-    // Replace the placeholder with the new guest list for tests
-    .pipe(replace('/* GUESTLIST_PLACEHOLDER */', `const guestList = ${guestListJson};`))
-    .pipe(gulp.dest('tests')); // Write the output back to the 'tests' folder
+        // Replace any previous guest list definition (capturing multiline objects)
+        .pipe(replace(/const guestList = {[^]*?};/, `const guestList = ${guestListJson};`))
+        .pipe(gulp.dest('tests')); // Write the output back to the 'tests' folder
 
     return gulp.src('js/scripts.js', { allowEmpty: true })
-        // Remove any previous guest list definition by wiping out the placeholder line
-        .pipe(replace(/const guestList = .*;/, '/* GUESTLIST_PLACEHOLDER */'))
-        // Replace placeholder with the new guest list
-        .pipe(replace('/* GUESTLIST_PLACEHOLDER */', `const guestList = ${guestListJson};`))
+        // Replace any previous guest list definition (capturing multiline objects)
+        .pipe(replace(/const guestList = {[^]*?};/, `const guestList = ${guestListJson};`))
         .pipe(gulp.dest('js')); // Write the output back to the 'js' folder
 });
 
