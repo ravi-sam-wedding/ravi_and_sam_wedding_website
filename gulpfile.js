@@ -8,7 +8,6 @@ var cleanCSS = require('gulp-clean-css'); // Gulp-Clean-CSS for minifying CSS fi
 var rename = require('gulp-rename'); // Gulp-Rename for renaming files
 var replace = require('gulp-replace'); // Gulp-Replace for replacing text in files
 var fs = require('fs'); // Node.js File System module for reading files
-var crypto = require('crypto'); // Node.js Crypto module for generating MD5 hashes
 
 // Task to generate guestList JSON and embed it into scripts.js
 gulp.task('generate-guestlist', function () {

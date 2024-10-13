@@ -609,6 +609,23 @@ $(document).ready(function () {
     /***************** Tooltips ******************/
     $('[data-toggle="tooltip"]').tooltip();
 
+    /***************** Melo Popup ******************/
+    document.getElementById("heart-icon").addEventListener("click", function() {
+        document.getElementById("melo-popup").style.display = "block";
+    });
+    
+    document.querySelector(".melo-popup .close").addEventListener("click", function() {
+        document.getElementById("melo-popup").style.display = "none";
+    });
+    
+    // Close the popup if the user clicks outside the content
+    window.addEventListener("click", function(event) {
+        var popup = document.getElementById("melo-popup");
+        if (event.target == popup) {
+            popup.style.display = "none";
+        }
+    });
+    
     /***************** Nav Transformicon ******************/
 
     /* When user clicks the Icon */

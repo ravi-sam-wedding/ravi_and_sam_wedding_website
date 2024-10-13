@@ -391,6 +391,44 @@ Social share buttons
 }
 
 /* ==========================================================================
+Melo easter egg
+========================================================================== */
+.melo-popup {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+}
+
+.melo-popup-content {
+  position: relative;
+  margin: 15% auto;
+  padding: 20px;
+  width: 300px;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.melo-popup img {
+  width: 100%;
+  height: auto;
+}
+
+.melo-popup .close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ==========================================================================
 Intro
 ========================================================================== */
 .intro span.icon {
