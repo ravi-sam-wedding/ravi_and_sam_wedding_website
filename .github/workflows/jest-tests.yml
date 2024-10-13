@@ -25,7 +25,7 @@ jobs:
       run: npm install
 
     - name: Run RSVP Validation Test
-      run: npm run test -- rsvpValidation.test.js
+      run: npm run test -- unitTests/rsvpValidation.test.js
 
     - name: Run RSVP Submission Test
-      run: npm run test -- rsvpSubmission.test.js
+      run: npm run test -- unitTests/rsvpSubmission.test.js
