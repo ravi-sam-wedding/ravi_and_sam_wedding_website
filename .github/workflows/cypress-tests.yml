@@ -1,16 +1,16 @@
-# name: cypress-tests
+name: cypress-tests
 
-# on:
-#   push:
-#     branches:name: cypress-tests
+on:
+  push:
+    branches:name: cypress-tests
 
-# on:
-#   push:
-#     branches:
-#       - main
-#   pull_request:
-#     branches:
-#       - main
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 # jobs:
 #   cypress-test:
