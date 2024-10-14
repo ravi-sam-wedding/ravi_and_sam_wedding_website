@@ -19,6 +19,7 @@ Global Styles
 }
 .no-padding {
   padding: 0;
+  box-sizing: border-box;
 }
 .no-margin {
   margin: 0;
@@ -180,6 +181,7 @@ Waypoinsts
   -webkit-animation-delay: 0.3s;
   animation-delay: 0.3s;
   opacity: 0.95 !important; /* Adjust the transparency (0 is fully transparent, 1 is fully opaque) */
+  margin-top: 20px;
 }
 .bounceInLeft,
 .bounceInRight,
@@ -412,6 +414,7 @@ Social share buttons
   width: 100%;
   height: auto;
   display: block;
+  float: left;
 }
 
 /* ==========================================================================

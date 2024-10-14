@@ -26,9 +26,6 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-
-    - name: Set Cypress cache folder
-      run: export CYPRESS_CACHE_FOLDER=cache/Cypress
       
     - name: Run Cypress Integration Tests
       run: npm run cypress_test
