@@ -735,7 +735,7 @@ $(document).ready(function () {
   const canvas = document.getElementById('snakeGame');
   const ctx = canvas.getContext('2d');
   const box = 30;
-  const secretCode = "This is the secret code."; // The secret code that gets revealed
+  const secretCode = 'This is the secret code.'; // The secret code that gets revealed
   let currentLetterIndex = 0;
   let secretCodeDisplay = document.getElementById('secret-code-display');
   let startButton = document.getElementById('startButton');
@@ -762,9 +762,9 @@ $(document).ready(function () {
   // Start the game when the button is clicked
   startButton.addEventListener('click', function () {
     resetGame();
-    game = setInterval(updateGame, 200);  // Slower game loop (200ms)
-    startButton.disabled = true;  // Disable the button while the game is running
-    gameOverPopup.style.display = 'none';  // Hide popup if it was previously shown
+    game = setInterval(updateGame, 200); // Slower game loop (200ms)
+    startButton.disabled = true; // Disable the button while the game is running
+    gameOverPopup.style.display = 'none'; // Hide popup if it was previously shown
   });
 
   // Close the popup when the "x" button is clicked
@@ -775,10 +775,10 @@ $(document).ready(function () {
 
   // Restart the game when the "Restart Game" button is clicked
   restartButton.addEventListener('click', function () {
-    gameOverPopup.style.display = 'none';  // Hide the popup
-    resetGame();  // Reset the game state
-    game = setInterval(updateGame, 200);  // Start the game loop again
-    startButton.disabled = true;  // Disable the start button
+    gameOverPopup.style.display = 'none'; // Hide the popup
+    resetGame(); // Reset the game state
+    game = setInterval(updateGame, 200); // Start the game loop again
+    startButton.disabled = true; // Disable the start button
   });
 
   function resetGame() {
@@ -789,12 +789,12 @@ $(document).ready(function () {
       y: Math.floor(Math.random() * 20) * box,
     };
     currentLetterIndex = 0;
-    secretCodeDisplay.innerHTML = "";  // Clear the secret code display
+    secretCodeDisplay.innerHTML = ''; // Clear the secret code display
     ctx.clearRect(0, 0, canvas.width, canvas.height);
   }
 
   function changeDirection(event) {
-    event.preventDefault();  // Prevent the default behavior of arrow keys (scrolling)
+    event.preventDefault(); // Prevent the default behavior of arrow keys (scrolling)
 
     if (event.keyCode === 37 && direction !== 'RIGHT') direction = 'LEFT';
     if (event.keyCode === 38 && direction !== 'DOWN') direction = 'UP';
@@ -841,7 +841,7 @@ $(document).ready(function () {
       };
 
       if (currentLetterIndex < secretCode.length) {
-        secretCodeDisplay.innerHTML += secretCode[currentLetterIndex];  // Add letters to the display
+        secretCodeDisplay.innerHTML += secretCode[currentLetterIndex]; // Add letters to the display
         currentLetterIndex++;
       }
     } else {
@@ -855,29 +855,35 @@ $(document).ready(function () {
     if (direction === 'RIGHT') newHead.x += box;
     if (direction === 'DOWN') newHead.y += box;
 
-    if (newHead.x < 0 || newHead.x >= canvas.width || newHead.y < 0 || newHead.y >= canvas.height || collision(newHead, snake)) {
+    if (
+      newHead.x < 0 ||
+      newHead.x >= canvas.width ||
+      newHead.y < 0 ||
+      newHead.y >= canvas.height ||
+      collision(newHead, snake)
+    ) {
       clearInterval(game);
-      showGameOverPopup();  // Show the Game Over popup
+      showGameOverPopup(); // Show the Game Over popup
     }
-  
+
     snake.unshift(newHead);
-  
+
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawApple();
     drawSnake();
   }
-  
+
   function collision(head, snake) {
     for (let i = 0; i < snake.length; i++) {
       if (head.x === snake[i].x && head.y === snake[i].y) return true;
     }
     return false;
   }
-  
+
   // Show the Game Over popup
   function showGameOverPopup() {
     gameOverPopup.style.display = 'block';
-    startButton.disabled = false;  // Re-enable the start button after the game ends
+    startButton.disabled = false; // Re-enable the start button after the game ends
   }
 
   /********************** Add to Calendar: Welcome Dinner **********************/
