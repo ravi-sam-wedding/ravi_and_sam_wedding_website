@@ -732,7 +732,19 @@ Instagram
     width: 100%;
   }
 }
+.divider {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  margin: 40px 0;
+}
 
+/* Style for the secret code display */
+#secret-code-display {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: $txt-primary;
+}
 /* ==========================================================================
 Engagement Pics
 ========================================================================== */
@@ -924,6 +936,13 @@ RSVP form
       .fa-key,
       i.fa-glass,
       i.fa-birthday-cake {
+        font-size: 14px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 20px;
+      }
+      i.fa-comment {
         font-size: 14px;
         position: absolute;
         top: 50%;
