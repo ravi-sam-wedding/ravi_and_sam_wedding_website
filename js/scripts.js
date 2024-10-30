@@ -960,7 +960,7 @@ $(document).ready(function () {
           $('#alert-wrapper').html(
             alert_markup(
               'warning',
-              '<strong>Note:</strong> Please enter one guest\'s name at a time. Contact us if you have issues.'
+              "<strong>Note:</strong> Please enter one guest's name at a time. Contact us if you have issues."
             )
           );
           $('.rsvp-btn').prop('disabled', true); // Disable the submit button
@@ -1069,24 +1069,29 @@ $(document).ready(function () {
     $('#alert-wrapper').html(
       alert_markup(
         'info',
-        '<strong>Just a sec!</strong> We are saving your details.'
+        '<strong>Just a second!</strong> We are saving your details.'
       )
     );
 
     // Get the user's name from the form
     var name = $('input[name="name"]').val().trim().toLowerCase();
     var hashedName = MD5(name); // Use the MD5 function to hash the input name
+    var welcomeDinner = $('input[name="welcome_dinner"]').val().trim().toLowerCase();
+    var ceremonyReception = $('input[name="ceremony_reception"]').val().trim().toLowerCase();
 
     // Check if the hashed name is in the guest list
     if (guestList[hashedName]) {
-      if (guestList[hashedName].plusOneAllowed) {
-        // If plus one is allowed, prompt for the plus one name
-        var plusOneName = prompt(
-          'You are allowed to bring a plus one. Please enter their name or (N/A):'
-        );
-        if (plusOneName) {
-          // Add the plus one name to formData
-          formData += '&plus_one=' + encodeURIComponent(plusOneName);
+      // Check if they responded "yes" to either the welcome dinner or ceremony reception
+      if (welcomeDinner === 'yes' || ceremonyReception === 'yes') {
+        if (guestList[hashedName].plusOneAllowed) {
+          // If plus one is allowed, prompt for the plus one name
+          var plusOneName = prompt(
+            'You are allowed to bring a plus one. Please enter their name or (N/A):'
+          );
+          if (plusOneName) {
+            // Add the plus one name to formData
+            formData += '&plus_one=' + encodeURIComponent(plusOneName);
+          }
         }
       }
 
@@ -1101,7 +1106,13 @@ $(document).ready(function () {
             $('#alert-wrapper').html(alert_markup('danger', data.message));
           } else {
             $('#alert-wrapper').html('');
+            // Check if the guest said "no" to both events
+            if (welcomeDinner === 'no' && ceremonyReception === 'no') {
+              // Display the "no attendance" modal
+              $('#no-attendance-modal').modal('show');
+            } else {
             $('#rsvp-modal').modal('show');
+            }
           }
         })
         .fail(function (data) {
