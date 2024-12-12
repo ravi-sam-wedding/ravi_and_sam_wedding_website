@@ -236,7 +236,7 @@ var MD5 = function (string) {
 const fs = require('fs');
 
 // Read the plain text guest list
-fs.readFile('guestList.txt', 'utf8', function (err, data) {
+fs.readFile('./guest-list/guestList.txt', 'utf8', function (err, data) {
   if (err) {
     console.error('Error reading guest list file:', err);
     return;
@@ -253,7 +253,7 @@ fs.readFile('guestList.txt', 'utf8', function (err, data) {
 
   // Write the hashed guest list to a JSON file
   fs.writeFile(
-    'guestList.json',
+    './guest-list/guestList.json',
     JSON.stringify(hashedGuestList, null, 4),
     function (err) {
       if (err) {
