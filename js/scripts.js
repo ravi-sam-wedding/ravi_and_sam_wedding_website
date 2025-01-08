@@ -548,6 +548,9 @@ const guestList = {
   edc8541efcf52ecb677dec5a2684d44c: {
     plusOneAllowed: false,
   },
+  '978fd0de7b87e03b715fe5b60c693328': {
+    plusOneAllowed: false,
+  },
   '0f42f925c1b805195765cdb3e10b06fd': {
     plusOneAllowed: false,
   },
